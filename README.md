@@ -239,4 +239,5 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
 ---
 
 **技術棧**: FastAPI, OpenAI SDK, Pydantic, openpyxl, Streamlit
+
 **LLM 支援**: OpenRouter, vLLM, OpenAI-compatible APIs
