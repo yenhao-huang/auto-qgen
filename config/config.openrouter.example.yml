@@ -1,0 +1,37 @@
+# Excel Parser LLM + Augmenter Pipeline 配置檔案 (OpenRouter 範例)
+
+# 輸入/輸出設定
+input:
+  file: "data/raw_data/vedio/youtube_100_records.xlsx"
+
+output:
+  dir: "results/pipeline"
+  parsed_data: null
+  augmented_queries: null
+
+# Parser LLM 設定 (使用 OpenRouter 免費模型)
+parser:
+  llm:
+    url: "https://openrouter.ai/api"
+    model: "google/gemini-2.0-flash-exp:free"
+    api_key: "YOUR_API_KEY_HERE"  # 請替換為您的 API Key
+    use_openrouter: true
+    max_retries: 3
+    max_tokens: 8000
+    temperature: 0.3
+    top_p: 0.9
+
+# Augmenter LLM 設定 (可以使用不同的模型)
+augmenter:
+  llm:
+    url: "https://openrouter.ai/api"
+    model: "google/gemini-2.0-flash-exp:free"
+    api_key: "YOUR_API_KEY_HERE"  # 請替換為您的 API Key
+    use_openrouter: true
+    max_retries: 3
+  prompt_name: "default"
+
+# 執行選項
+options:
+  skip_parser: false
+  quiet: false
