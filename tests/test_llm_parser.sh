@@ -1,3 +1,3 @@
-python -m utils.parser.excel_parser_llm --file "data/raw_data/一般服務/表12-1.xlsx" --vllm-url https://openrouter.ai/api --model openai/gpt-oss-20b:free --api-key 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 --use-openrouter
-python -m utils.parser.excel_parser_llm --file "data/raw_data/一般服務/表12-1.xlsx" --vllm-url https://openrouter.ai/api --model kwaipilot/kat-coder-pro:free --api-key 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 --use-openrouter
-python -m utils.parser.excel_parser_llm --file "data/raw_data/vedio/youtube_100_records.xlsx" --vllm-url https://openrouter.ai/api --model kwaipilot/kat-coder-pro:free --api-key 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 --use-openrouter
+python -m utils.parser.excel_parser_llm --file "data/raw_data/一般服務/表12-1.xlsx" --vllm-url https://openrouter.ai/api --model openai/gpt-oss-20b:free --api-key xxx --use-openrouter
+python -m utils.parser.excel_parser_llm --file "data/raw_data/一般服務/表12-1.xlsx" --vllm-url https://openrouter.ai/api --model kwaipilot/kat-coder-pro:free --api-key xxx --use-openrouter
+python -m utils.parser.excel_parser_llm --file "data/raw_data/vedio/youtube_100_records.xlsx" --vllm-url https://openrouter.ai/api --model kwaipilot/kat-coder-pro:free --api-key xxx --use-openrouter

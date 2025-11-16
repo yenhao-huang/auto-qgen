@@ -16,6 +16,11 @@
 * 支援雲端與地端模型
 * 可與 Open-WebUI / API 工作流直接整合
 
+<p align="center">
+  <img src="./images/ui.png" alt="UI 預覽" width="100%">
+</p>
+
+
 ## 三種使用方式
 
 ### 方式 1: 命令列腳本
