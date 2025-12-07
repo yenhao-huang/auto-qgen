@@ -1,0 +1,48 @@
+# OCR 配置文件
+# 用於圖片 OCR 辨識
+
+# 輸入目錄路徑（包含待處理的 PNG 圖片）
+input_dir: ./data/png
+
+# 輸出目錄路徑（保存 OCR 結果的 JSON 檔案）
+output_dir: ./results/ocr/
+
+# OCR 引擎選擇
+# 可用選項：paddle, paddleocr, dots, dotsocr, chandra, chandraocr, nv_nemotron
+engine: paddle
+
+# OCR 模式：local（本地服務）、vllm（VLLM 服務）、openrouter（OpenRouter API）
+mode: vllm
+
+# Local 模式配置（當 mode=local 時使用）
+local:
+  url: http://localhost:8000
+  model_name: local_model
+  temperature: 0.0
+  timeout: 3600
+
+# VLLM 模式配置（當 mode=vllm 時使用）
+vllm:
+  url: http://192.168.1.76:3264/v1/chat/completions
+  model_name: /workspace/llm_model
+  max_tokens: 4096
+  temperature: 0.7
+  top_p: 0.9
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+  timeout: 3600
+
+# OpenRouter 模式配置（當 mode=openrouter 時使用）
+openrouter:
+  url: https://openrouter.ai/api/v1/chat/completions
+  api_key: your_api_key_here
+  model_name: anthropic/claude-3.5-sonnet
+  max_tokens: 18000
+  temperature: 0.7
+  top_p: 0.9
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+  timeout: 3600
+
+# 是否遞迴搜尋子目錄
+recursive: true

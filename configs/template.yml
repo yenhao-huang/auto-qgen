@@ -1,0 +1,53 @@
+# 問題生成配置文件
+# 從 Ground Truth 資料生成問題，用於 benchmark 測試
+
+# 輸入檔案路徑（Ground Truth JSON）
+input: results/ground_truth/paddleocr_chandra_full_class_chunked.json
+
+# 輸出檔案路徑（Benchmark JSON）
+output: results/ground_truth/benchmark.json
+
+# 類型篩選（只處理特定類型的文件）
+# 格式：類型名稱: 數量上限
+filter_type:
+  令: 1
+
+# LLM 模式：vllm 或 openrouter
+mode: vllm
+
+# VLLM 配置（當 mode=vllm 時使用）
+
+# VLLM 配置（當 mode=vllm 時使用）[gpt-oss-20b]
+vllm:
+  url: http://192.168.1.79:3472/v1/chat/completions
+  model_name: gemma-12b-8bit
+  # LLM 生成參數
+  max_tokens: 2048
+  temperature: 0.7
+  top_p: 0.9
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+  # 是否為 thinking model（會解析 <question> 標籤）
+  is_thinking_mode: false
+  # 是否限制 LLM 輸出格式（使用 guided_json）
+  limit_llmoutput_scheme: false
+
+# OpenRouter 配置（當 mode=openrouter 時使用）
+openrouter:
+  url: https://openrouter.ai/api/v1/chat/completions
+  api_key: your_api_key_here
+  model_name: anthropic/claude-3.5-sonnet
+  # LLM 生成參數
+  max_tokens: 18000
+  temperature: 0.7
+  top_p: 0.9
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+  # 是否為 thinking model（會解析 <question> 標籤）
+  is_thinking_mode: false
+
+# Prompt 名稱（預設：default）
+prompt_name: default
+
+# 初始化時是否驗證 API 連線（預設：false）
+verify_connection: False

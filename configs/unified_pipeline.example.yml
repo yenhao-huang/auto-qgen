@@ -1,0 +1,190 @@
+# 統一 Pipeline 配置文件
+# 支援 Excel、Image、PDF 三種類型的處理
+
+# ============================================================================
+# 通用設定
+# ============================================================================
+# Pipeline 類型：auto（自動檢測）、excel、image、pdf
+pipeline_type: auto
+
+# 輸入文件路徑
+input: data/example.xlsx
+
+# Metadata（選用）- 可以添加任意自定義資訊
+metadata:
+  project_name: "專案名稱"
+  created_by: "使用者名稱"
+  description: "處理描述"
+  tags: ["tag1", "tag2"]
+
+# ============================================================================
+# Excel Pipeline 設定
+# ============================================================================
+excel:
+  # 是否跳過 Parser 步驟
+  skip_parser: false
+  # 當 skip_parser=true 時使用的已解析資料路徑
+  parsed_data_path: "results/parsed_data.json"
+
+  # 輸出目錄
+  output_dir: "results/excel/"
+
+  # Parser LLM 設定
+  parser:
+    llm:
+      url: "http://192.168.1.79:8074/v1/chat/completions"
+      model: gemma-12b
+      api_key: null
+      use_openrouter: false
+      max_retries: 3
+
+  # Augmenter LLM 設定
+  augmenter:
+    prompt_name: "default"
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.79:8074/v1/chat/completions
+      model_name: gemma-12b
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: true
+      limit_llmoutput_scheme: false
+
+    openrouter:
+      api_key: "YOUR_API_KEY_HERE"
+      url: "https://openrouter.ai/api/v1/chat/completions"
+      model_name: "google/gemini-2.0-flash-exp:free"
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: false
+
+# ============================================================================
+# Image Pipeline 設定
+# ============================================================================
+image:
+  # OCR 設定
+  ocr:
+    # 輸出目錄路徑（保存 OCR 結果的 JSON 檔案）
+    output_dir: ./results/ocr/
+
+    # OCR 引擎選擇
+    # 可用選項：paddle, paddleocr, dots, dotsocr, chandra, chandraocr, nv_nemotron
+    engine: paddle
+
+    # OCR 模式：local（本地服務）、vllm（VLLM 服務）、openrouter（OpenRouter API）
+    mode: vllm
+
+    # VLLM 模式配置
+    vllm:
+      url: http://192.168.1.76:3264/v1/chat/completions
+      model_name: /workspace/llm_model
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      timeout: 3600
+
+    # OpenRouter 模式配置
+    openrouter:
+      url: https://openrouter.ai/api/v1/chat/completions
+      api_key: your_api_key_here
+      model_name: anthropic/claude-3.5-sonnet
+      max_tokens: 18000
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      timeout: 3600
+
+    # 是否遞迴搜尋子目錄（當輸入為目錄時）
+    recursive: true
+
+  # 生成問題設定
+  gen_ques:
+    # 輸出目錄路徑
+    output_dir: results/ocr/
+
+    # LLM 模式：vllm 或 openrouter
+    mode: vllm
+
+    # VLLM 配置
+    vllm:
+      url: http://192.168.1.79:8074/v1/chat/completions
+      model_name: gemma-12b
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: True
+      limit_llmoutput_scheme: false
+
+    # Prompt 名稱
+    prompt_name: default
+
+    # 初始化時是否驗證 API 連線
+    verify_connection: False
+
+  # 是否只執行 OCR（不執行問題生成）
+  ocr_only: false
+
+# ============================================================================
+# PDF Pipeline 設定
+# ============================================================================
+pdf:
+  # PDF 轉圖片設定
+  conversion:
+    # DPI 解析度
+    dpi: 200
+    # 輸出圖片格式
+    format: PNG
+    # 最大圖片尺寸
+    max_size: 1024
+
+  # OCR 設定（與 image.ocr 相同）
+  ocr:
+    output_dir: ./results/pdf_ocr/
+    engine: paddle
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.76:3264/v1/chat/completions
+      model_name: /workspace/llm_model
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      timeout: 3600
+
+    recursive: true
+
+  # 生成問題設定（與 image.gen_ques 相同）
+  gen_ques:
+    output_dir: results/pdf_ocr/
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.79:8074/v1/chat/completions
+      model_name: gemma-12b
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: True
+      limit_llmoutput_scheme: false
+
+    prompt_name: default
+    verify_connection: False
+
+  # 是否只執行 OCR（不執行問題生成）
+  ocr_only: false

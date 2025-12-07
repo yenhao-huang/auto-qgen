@@ -1,0 +1,58 @@
+# Excel Parser LLM + Augmenter Pipeline 配置檔案
+
+# ============================================================================
+# 輸入設定
+# ============================================================================
+input:
+  file_path: "data/excel/表1-2.xlsx"           # 必填：輸入 Excel 檔案路徑
+  skip_parser: false                          # 是否跳過 Parser 步驟
+  parsed_data_path: "results/parsed_data.json"  # 當 skip_parser=true 時使用
+
+# ============================================================================
+# 輸出設定
+# ============================================================================
+output:
+  dir: "results/excel/"                       # 輸出目錄（留空則使用 timestamp）
+
+
+# ============================================================================
+# Parser LLM 設定
+# ============================================================================
+parser:
+  llm:
+    url: "http://192.168.1.79:8074/v1/chat/completions"
+    model: gemma-12b
+    api_key: null
+    use_openrouter: false
+    max_retries: 3
+
+# ============================================================================
+# Augmenter LLM 設定
+# ============================================================================
+augmenter:
+  prompt_name: "default"                      # Prompt 模板名稱
+  mode: vllm
+  vllm:
+    url: http://192.168.1.79:8074/v1/chat/completions
+    model_name: gemma-12b
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 0.9
+    frequency_penalty: 0.1
+    presence_penalty: 0.1
+    is_thinking_mode: true
+    limit_llmoutput_scheme: false
+
+  # ============================================================================
+  # OpenRouter 設定（當 mode="openrouter" 時使用）
+  # ============================================================================
+  openrouter:
+    api_key: "YOUR_API_KEY_HERE"                # OpenRouter API Key
+    url: "https://openrouter.ai/api/v1/chat/completions"
+    model_name: "google/gemini-2.0-flash-exp:free"
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 0.9
+    frequency_penalty: 0.1
+    presence_penalty: 0.1
+    is_thinking_mode: false
