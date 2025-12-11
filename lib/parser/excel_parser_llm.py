@@ -15,6 +15,9 @@ import requests
 import openpyxl
 from openpyxl.worksheet.worksheet import Worksheet
 
+# 導入 PromptManager
+from lib.prompt.prompt_manager import PromptManager
+
 
 class ExcelParserLLM:
     """使用 LLM 解析 Excel 的模組"""
@@ -25,7 +28,9 @@ class ExcelParserLLM:
         model: str,
         api_key: Optional[str] = None,
         use_openrouter: bool = False,
-        max_retries: int = 3
+        max_retries: int = 3,
+        prompt_key: str = "excel_parser",
+        prompt_corpus_path: str = "configs/prompt_corpus.json"
     ):
         """
         初始化 Excel Parser with LLM
@@ -36,6 +41,8 @@ class ExcelParserLLM:
             api_key: API 金鑰（OpenRouter 需要）
             use_openrouter: 是否使用 OpenRouter API（預設：False）
             max_retries: 最大重試次數
+            prompt_key: prompt_corpus 中的 key（預設：excel_parser）
+            prompt_corpus_path: prompt_corpus.json 的路徑（預設：configs/prompt_corpus.json）
         """
         self.vllm_url = vllm_url.rstrip('/')
         self.model = model
@@ -43,6 +50,12 @@ class ExcelParserLLM:
         self.use_openrouter = use_openrouter
         self.max_retries = max_retries
         self.session = requests.Session()
+
+        # 初始化 PromptManager
+        self.prompt_manager = PromptManager(
+            prompt_key=prompt_key,
+            prompt_corpuse_path=prompt_corpus_path
+        )
 
     def get_column_name(self, col_index: int) -> str:
         """
@@ -139,7 +152,7 @@ class ExcelParserLLM:
 
     def create_prompt(self, excel_context: str) -> str:
         """
-        創建用於 LLM 的提示詞
+        創建用於 LLM 的提示詞（透過 PromptManager 管理）
 
         Args:
             excel_context: Excel 上下文資訊
@@ -147,39 +160,7 @@ class ExcelParserLLM:
         Returns:
             完整的提示詞
         """
-        prompt = f"""你是一個 Excel 表格分析專家。請分析以下 Excel 表格內容，提取以下資訊：
-
-1. 表格標題（title）
-2. X 軸的意義（x-axis）- 通常是橫向的欄位，例如年份、月份等
-3. Y 軸的意義（y-axis）- 通常是縱向的列，例如項目、指標等
-4. 重要的儲存格內容（cells）- 提取最多 5 個重要的數據儲存格
-5. 儲存格優先於欄位 (e.g., 申報增加費用 > 109 年)
-
-請以 JSON 格式回覆，格式如下：
-
-```json
-{{
-  "title": "表格標題",
-  "x-axis": "X軸意義",
-  "y-axis": "Y軸意義",
-  "cells": [
-    {{
-      "x-axis id": "欄位ID（如 K）",
-      "y-axis id": "列ID（如 10）",
-      "x-axis id 意思": "欄位意義（如 109 年）",
-      "y-axis id 意思": "列意義（如 申報增加費用(百萬元)）",
-      "值": "儲存格的值"
-    }}
-  ]
-}}
-```
-
-Excel 表格內容：
-{excel_context}
-
-請只回覆 JSON 格式的結果，不要包含其他說明文字。"""
-
-        return prompt
+        return self.prompt_manager.generate_prompt_text(context=excel_context)
 
     def call_llm(self, prompt: str) -> Dict[str, Any]:
         """
@@ -317,6 +298,48 @@ Excel 表格內容：
         }
 
         return result
+
+    def batch_parse_excel_with_llm(self, file_paths: List[Union[str, Path]]) -> List[Dict[str, Any]]:
+        """
+        批次使用 LLM 解析多個 Excel 檔案
+
+        Args:
+            file_paths: Excel 檔案路徑列表
+
+        Returns:
+            包含每個檔案解析結果的列表
+        """
+        results = []
+        total_files = len(file_paths)
+
+        print(f"\n開始批次處理 {total_files} 個 Excel 檔案...")
+        print("=" * 70)
+
+        for idx, file_path in enumerate(file_paths, 1):
+            try:
+                print(f"\n處理檔案 [{idx}/{total_files}]: {file_path}")
+                print("-" * 70)
+
+                result = self.parse_excel_with_llm(file_path)
+                results.append(result)
+
+                print(f"✓ 檔案 {idx} 處理完成")
+
+            except Exception as e:
+                print(f"✗ 檔案 {idx} 處理失敗: {e}")
+                # 將錯誤資訊也加入結果
+                results.append({
+                    "file_name": Path(file_path).name,
+                    "file_path": str(Path(file_path).absolute()),
+                    "error": str(e),
+                    "success": False
+                })
+                continue
+
+        print("\n" + "=" * 70)
+        print(f"批次處理完成！成功: {sum(1 for r in results if r.get('success', True) != False)}/{total_files}")
+
+        return results
 
     def save_result(self, result: Dict[str, Any], output_path: Union[str, Path]) -> None:
         """

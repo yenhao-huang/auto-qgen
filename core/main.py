@@ -22,6 +22,8 @@ import tempfile
 
 # 導入 pipeline
 from core.excel_pipeline import run as excel_run
+from core.ocr import ocr
+from core.gen_ques_for_img import gen_ques
 from lib.utils.pdf_to_image import PDFToImageConverter
 
 
@@ -46,16 +48,20 @@ def load_config(config_path: Path) -> Dict[str, Any]:
 
 def get_file_type(file_path: Path) -> str:
     """
-    判斷文件類型
+    判斷文件類型（支援單檔或目錄）
 
     Args:
-        file_path: 文件路徑
+        file_path: 文件路徑或目錄路徑
 
     Returns:
-        文件類型: 'excel', 'image', 'pdf', 或 'unknown'
+        文件類型: 'excel', 'image', 'pdf', 'directory', 或 'unknown'
     """
     if not file_path.exists():
         raise FileNotFoundError(f"文件不存在: {file_path}")
+
+    # 如果是目錄，返回 directory
+    if file_path.is_dir():
+        return 'directory'
 
     suffix = file_path.suffix.lower()
 
@@ -84,6 +90,9 @@ def determine_pipeline_type(config: Dict[str, Any]) -> str:
 
     Returns:
         Pipeline 類型: 'excel', 'image', 'pdf'
+
+    Raises:
+        ValueError: 當目錄中包含多種文件類型時
     """
     pipeline_type = config.get('pipeline_type', 'auto')
 
@@ -91,6 +100,55 @@ def determine_pipeline_type(config: Dict[str, Any]) -> str:
         # 自動檢測：根據輸入文件副檔名判斷
         input_path = Path(config['input'])
         file_type = get_file_type(input_path)
+
+        # 如果是目錄，檢查目錄中的檔案類型
+        if file_type == 'directory':
+            # 定義支援的檔案類型
+            excel_extensions = ['.xlsx', '.xls', '.xlsm', '.xlsb']
+            image_extensions = ['.png', '.jpg', '.jpeg', '.bmp', '.gif', '.tiff', '.webp']
+            pdf_extensions = ['.pdf']
+
+            # 收集各類型的檔案
+            excel_files = [f for f in input_path.iterdir() if f.is_file() and f.suffix.lower() in excel_extensions]
+            image_files = [f for f in input_path.iterdir() if f.is_file() and f.suffix.lower() in image_extensions]
+            pdf_files = [f for f in input_path.iterdir() if f.is_file() and f.suffix.lower() in pdf_extensions]
+
+            # 統計有幾種檔案類型
+            file_types_found = []
+            if excel_files:
+                file_types_found.append('Excel')
+            if image_files:
+                file_types_found.append('圖片')
+            if pdf_files:
+                file_types_found.append('PDF')
+
+            # 檢查是否為混合類型目錄
+            if len(file_types_found) > 1:
+                raise ValueError(
+                    f"錯誤：目錄中包含多種文件類型，只能處理同質目錄\n"
+                    f"目錄: {input_path}\n"
+                    f"發現的類型: {', '.join(file_types_found)}\n"
+                    f"  - Excel 檔案數: {len(excel_files)}\n"
+                    f"  - 圖片檔案數: {len(image_files)}\n"
+                    f"  - PDF 檔案數: {len(pdf_files)}\n"
+                    "請將不同類型的檔案分別放在不同的目錄中"
+                )
+
+            # 根據找到的類型返回對應的 pipeline
+            if excel_files:
+                return 'excel'
+            elif image_files:
+                return 'image'
+            elif pdf_files:
+                return 'pdf'
+            else:
+                raise ValueError(
+                    f"目錄中找不到支援的檔案類型: {input_path}\n"
+                    "支援的類型:\n"
+                    "  - Excel: .xlsx, .xls, .xlsm, .xlsb\n"
+                    "  - 圖片: .png, .jpg, .jpeg, .bmp, .gif, .tiff, .webp\n"
+                    "  - PDF: .pdf"
+                )
 
         if file_type == 'unknown':
             raise ValueError(
@@ -109,7 +167,7 @@ def determine_pipeline_type(config: Dict[str, Any]) -> str:
 
 def run_excel_pipeline(config: Dict[str, Any]) -> Dict[str, Any]:
     """
-    執行 Excel Pipeline
+    執行 Excel Pipeline（支援單檔或批次處理）
 
     Args:
         config: 統一配置字典
@@ -125,13 +183,12 @@ def run_excel_pipeline(config: Dict[str, Any]) -> Dict[str, Any]:
     excel_config = config.get('excel', {})
     metadata = config.get('metadata', {})
 
+    # 判斷是單檔還是目錄
+    is_directory = input_path.is_dir()
+
     # 構建 Excel Pipeline 需要的配置格式
     pipeline_config = {
-        'input': {
-            'file_path': str(input_path.resolve()),
-            'skip_parser': excel_config.get('skip_parser', False),
-            'parsed_data_path': excel_config.get('parsed_data_path', 'results/parsed_data.json')
-        },
+        'input': {},
         'output': {
             'dir': excel_config.get('output_dir', 'results/excel/')
         },
@@ -139,6 +196,24 @@ def run_excel_pipeline(config: Dict[str, Any]) -> Dict[str, Any]:
         'augmenter': excel_config.get('augmenter', {}),
         'metadata': metadata
     }
+
+    # 根據輸入類型設置不同的參數
+    if is_directory:
+        # 批次模式：使用 input_dir
+        pipeline_config['input']['input_dir'] = str(input_path.resolve())
+        print(f"模式: 批次處理")
+        print(f"輸入目錄: {input_path}")
+    else:
+        # 單檔模式：使用 file_path
+        pipeline_config['input']['file_path'] = str(input_path.resolve())
+        print(f"模式: 單檔處理")
+        print(f"輸入檔案: {input_path}")
+
+    # 共同參數
+    pipeline_config['input']['skip_parser'] = excel_config.get('skip_parser', False)
+    pipeline_config['input']['parsed_data_path'] = excel_config.get('parsed_data_path', 'results/parsed_data.json')
+
+    print("=" * 80)
 
     # 執行 Excel Pipeline
     result = excel_run(config=pipeline_config)
@@ -170,10 +245,6 @@ def run_pdf_pipeline(config: Dict[str, Any]) -> bool:
     fmt = conversion_config.get('format', 'PNG')
     max_size = conversion_config.get('max_size', 1024)
 
-    # 建立 PDF 轉圖片的輸出目錄
-    pdf_images_dir = input_path.parent / f"{input_path.stem}_images"
-    pdf_images_dir.mkdir(parents=True, exist_ok=True)
-
     # 使用 PDF 轉圖片轉換器
     converter = PDFToImageConverter(dpi=dpi, max_size=max_size, fmt=fmt)
 
@@ -182,20 +253,52 @@ def run_pdf_pipeline(config: Dict[str, Any]) -> bool:
     print("=" * 80)
     print(f"DPI: {dpi}, 格式: {fmt}, 最大尺寸: {max_size}")
 
-    result = converter.convert(
-        pdf_path=str(input_path),
-        output_dir=str(pdf_images_dir),
-        filename_prefix=input_path.stem
-    )
+    # 判斷 input_path 是目錄還是檔案
+    if input_path.is_dir():
+        # 目錄：使用 convert_batch
+        print(f"輸入為目錄：{input_path}")
+        pdf_images_dir = input_path.parent / f"{input_path.name}_images"
+        pdf_images_dir.mkdir(parents=True, exist_ok=True)
 
-    if result.status != 'success':
-        print(f"\n錯誤：PDF 轉圖片失敗 - {result.error}")
-        return False
+        batch_output = converter.convert_batch(
+            input_dir=str(input_path),
+            output_dir=str(pdf_images_dir)
+        )
 
-    print(f"\n✓ PDF 轉圖片完成")
-    print(f"  - 總頁數：{result.total_pages}")
-    print(f"  - 圖片數：{len(result.image_paths)}")
-    print(f"  - 輸出目錄：{result.output_dir}")
+        if batch_output.total == 0 or batch_output.success == 0:
+            print(f"\n錯誤：目錄中沒有找到 PDF 檔案或全部轉換失敗")
+            return False
+
+        # 統計結果
+        total_pages = sum(r.total_pages for r in batch_output.results if r.status == 'success')
+        total_images = sum(len(r.image_paths) for r in batch_output.results if r.status == 'success')
+
+        print(f"\n✓ 批次 PDF 轉圖片完成")
+        print(f"  - 成功檔案數：{batch_output.success}/{batch_output.total}")
+        print(f"  - 總頁數：{total_pages}")
+        print(f"  - 總圖片數：{total_images}")
+        print(f"  - 輸出目錄：{pdf_images_dir}")
+
+    else:
+        # 單一檔案：使用 convert
+        print(f"輸入為單一檔案：{input_path}")
+        pdf_images_dir = input_path.parent / f"{input_path.stem}_images"
+        pdf_images_dir.mkdir(parents=True, exist_ok=True)
+
+        result = converter.convert(
+            pdf_path=str(input_path),
+            output_dir=str(pdf_images_dir),
+            filename_prefix=input_path.stem
+        )
+
+        if result.status != 'success':
+            print(f"\n錯誤：PDF 轉圖片失敗 - {result.error}")
+            return False
+
+        print(f"\n✓ PDF 轉圖片完成")
+        print(f"  - 總頁數：{result.total_pages}")
+        print(f"  - 圖片數：{len(result.image_paths)}")
+        print(f"  - 輸出目錄：{result.output_dir}")
 
     # 執行圖片 Pipeline
     print("\n" + "=" * 80)
@@ -292,8 +395,6 @@ def _run_image_ocr_and_gen(
     Returns:
         是否成功
     """
-    from core.ocr import ocr
-    from core.gen_ques_for_img import gen_ques
 
     # 準備 OCR 配置
     ocr_cfg = {
@@ -474,7 +575,15 @@ def main():
             # 顯示結果
             if result.get("success"):
                 print(f"\n✓ Excel Pipeline 執行成功")
-                print(f"  - 處理數量: {result.get('total_count', 'N/A')}")
+
+                # 如果是批次模式，顯示檔案數量
+                if result.get('batch_mode'):
+                    print(f"  - 處理模式: 批次處理")
+                    print(f"  - 處理檔案數: {result.get('file_count', 'N/A')}")
+                else:
+                    print(f"  - 處理模式: 單檔處理")
+
+                print(f"  - 處理數據數: {result.get('total_count', 'N/A')}")
                 print(f"  - Parser 輸出: {result.get('parsed_data_path', 'N/A')}")
                 print(f"  - Augmenter 輸出: {result.get('augmented_queries_path', 'N/A')}")
             else:

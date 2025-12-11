@@ -1,0 +1,432 @@
+[
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"111 年\", \"cell's y-axis id 意思\": \"預算數(百萬元)\", \"值\": \"271500000\"}",
+    "raw_response": {
+      "id": "chatcmpl-b119dc3a638e98fb",
+      "object": "chat.completion",
+      "created": 1765462235,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 111 年牙醫門診總額12~18 歲青少年口腔提升照護試辦計畫的預算金額是多少？\n2. 表5‑3 裡顯示的 111 年度預算數（百萬元）是多少？\n3. 在牙醫門診總額12~18 歲青少年口腔提升照護試辦計畫中，111 年度的預算金額為多少？\n4. 這份表格顯示的 111 年度預算金額為多少百萬元？\n5. 牙醫門診總額12~18 歲青少年口腔提升照護試辦計畫在 111 年投入了多少預算？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language queries that a user might ask to retrieve this data. Data: table title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度; Y-axis: 項目. cell's x-axis id meaning: 111 年 (i.e., year 111). cell's y-axis id meaning: 預算數(百萬元). Value: 271500000.\n\nThus the table contains data for year 111, budget amount 271,500,000? Wait 271,500,000 百萬元? That seems huge. But maybe it's 271.5 million? Actually 271,500,000 (hundred million?) The value is 271500000. So likely the answer is that in year 111, the budget was 271.5 million (百萬元). We need to produce 3-5 queries that would return that data. Each query should be natural, professional but not too formal. Each question should focus on different angle: ask about the budget amount, ask about the year, ask about the program, ask about the total amount, ask about the cost per patient? But only data is one cell.\n\nWe need to ensure each question has this data as main or only answer. So each question must be answered by this data. So queries like \"What was the budget for the dental outpatient program for 12-18 year olds in FY111?\" The answer is 271.5 million. Another: \"In which year did the dental outpatient program have a budget of 271.5 million?\" Another: \"How much money was allocated to the dental outpatient program for adolescents in 111?\" Another: \"What is the total expenditure for the dental outpatient program in year 111?\" Another: \"What is the budget figure shown in Table 5-3 for year 111?\" These all produce same answer.\n\nWe need 3-5 queries. Let's produce 5.\n\nAlso keep format: numbered lines starting with number and dot.\n\nEnsure each line is separate. No extra explanation.\n\nLet's craft them:\n\n1. 111年牙醫門診總額12~18歲青少年口腔提升照護試辦計畫的預算是多少？\n2. 表5-3中顯示的111年度牙醫門診總額預算數值是什麼？\n3. 在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年度的預算金額是多少百萬元？\n4. 這份表格顯示的111年度預算金額為多少？\n5. 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫在111年度投入了多少預算？\n\nBut we must ensure each query is unique angle. They are somewhat similar but okay.\n\nLet's produce final answer.",
+            "reasoning_content": "We need to produce 3-5 natural language queries that a user might ask to retrieve this data. Data: table title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度; Y-axis: 項目. cell's x-axis id meaning: 111 年 (i.e., year 111). cell's y-axis id meaning: 預算數(百萬元). Value: 271500000.\n\nThus the table contains data for year 111, budget amount 271,500,000? Wait 271,500,000 百萬元? That seems huge. But maybe it's 271.5 million? Actually 271,500,000 (hundred million?) The value is 271500000. So likely the answer is that in year 111, the budget was 271.5 million (百萬元). We need to produce 3-5 queries that would return that data. Each query should be natural, professional but not too formal. Each question should focus on different angle: ask about the budget amount, ask about the year, ask about the program, ask about the total amount, ask about the cost per patient? But only data is one cell.\n\nWe need to ensure each question has this data as main or only answer. So each question must be answered by this data. So queries like \"What was the budget for the dental outpatient program for 12-18 year olds in FY111?\" The answer is 271.5 million. Another: \"In which year did the dental outpatient program have a budget of 271.5 million?\" Another: \"How much money was allocated to the dental outpatient program for adolescents in 111?\" Another: \"What is the total expenditure for the dental outpatient program in year 111?\" Another: \"What is the budget figure shown in Table 5-3 for year 111?\" These all produce same answer.\n\nWe need 3-5 queries. Let's produce 5.\n\nAlso keep format: numbered lines starting with number and dot.\n\nEnsure each line is separate. No extra explanation.\n\nLet's craft them:\n\n1. 111年牙醫門診總額12~18歲青少年口腔提升照護試辦計畫的預算是多少？\n2. 表5-3中顯示的111年度牙醫門診總額預算數值是什麼？\n3. 在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年度的預算金額是多少百萬元？\n4. 這份表格顯示的111年度預算金額為多少？\n5. 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫在111年度投入了多少預算？\n\nBut we must ensure each query is unique angle. They are somewhat similar but okay.\n\nLet's produce final answer."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1127,
+        "total_tokens": 1918,
+        "completion_tokens": 791,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"112 年\", \"cell's y-axis id 意思\": \"預算數(百萬元)\", \"值\": \"271500000\"}",
+    "raw_response": {
+      "id": "chatcmpl-bc04879018c4b598",
+      "object": "chat.completion",
+      "created": 1765462239,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112 年牙醫門診總額的預算金額（百萬元）是多少？\n2. 表5‑3 中，112 年的預算數值以百萬元計算為何？\n3. 請告訴我這份試辦計畫在 112 年的預算金額。\n4. 112 年牙醫門診總額的預算是什麼數字？\n5. 112 年的預算金額能給我一個具體數字嗎？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language queries based on the provided data. Data: table_title: 表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形. X-axis: 年度. Y-axis: 項目. Cell x-axis id meaning: 112 年. Cell y-axis id meaning: 預算數(百萬元). Value: 271500000.\n\nSo the data is: For year 112 (which is 2023?), budget amount (in hundred million) is 271,500,000? Wait: The cell's y-axis id meaning: 預算數(百萬元). So the value is 271500000. That seems like a large number; maybe it's in units of \"hundred million\"? But value is 271,500,000. Might be the budget in hundred million? Let's treat as 271.5 million? Actually 271,500,000 (hundred million) would be 27,150,000,000? But we don't need to interpret.\n\nWe need to ask queries that would have this data as the answer.\n\nWe need 3-5 queries. Each query must be natural, oral, professional but not too formal.\n\nExamples: \"112年的預算數是多少？\" \"請告訴我112年牙醫門診總額的預算數值\" etc.\n\nAlso we can ask about the unit: \"112年的預算數是以百萬元計算嗎?\" But the answer must be this data.\n\nBut each question must have this data as the main or only answer. So we cannot ask something that might have multiple answers.\n\nWe need to ensure each query's answer is this data: \"112 年 預算數(百萬元) = 271500000\".\n\nThus each query must be about that value.\n\nWe can ask different angles: \"112年的預算金額是多少？\", \"112年牙醫門診總額的預算是多少？\", \"112年表5-3的預算數是什麼？\", \"請問112年的預算數為多少？\", \"112年的預算金額為多少百萬元？\".\n\nWe need 3-5 queries.\n\nMake sure each question is natural and professional but not too formal. Avoid official bureaucratic language.\n\nLet's produce 5 queries:\n\n1. \"112 年牙醫門診總額的預算金額是多少？\"\n2. \"表5‑3中，112 年的預算數值為多少百萬元？\"\n3. \"請問 112 年這個試辦計畫的預算是多少？\"\n4. \"112 年的牙醫門診總額預算是什麼數字？\"\n5. \"112 年牙醫門診總額的預算金額能告訴我嗎？\"\n\nBut maybe some duplicates; we need different angles.\n\nLet's think of variations:\n\n- Ask about the numeric value directly: \"112 年的預算數是多少？\"\n\n- Ask about the unit: \"112 年的預算數以百萬元為單位，數值是多少？\"\n\n- Ask about the year: \"在表5-3中，112 年的預算金額為多少？\"\n\n- Ask about the plan: \"這份牙醫門診計畫中，112 年的預算是多少？\"\n\n- Ask about the total: \"牙醫門診總額在 112 年的預算是多少？\"\n\nWe must ensure each answer is just that value. Let's produce them accordingly.\n\nAlso we might ask about difference between other years? But we only have one year. So queries must revolve around that one value.\n\nLet's produce final output:\n\n1. 112 年牙醫門診總額的預算金額是多少？\n2. 表5‑3中，112 年的預算數值以百萬元計算是多少？\n3. 請告訴我這個試辦計畫在 112 年的預算金額。\n4. 112 年的牙醫門診總額預算是什麼數字？\n5. 112 年的預算金額能告訴我嗎？\n\nCheck each question: all answer is 271500000 (maybe with unit). The answer might be \"271,500,000 百萬元\". Wait that's too big. But we don't need to worry.\n\nBut the question \"112 年牙醫門診總額的預算金額是多少？\" The answer is 271500000 (百萬元). Good.\n\n\"表5‑3中，112 年的預算數值以百萬元計算是多少？\" Answer same.\n\n\"請告訴我這個試辦計畫在 112 年的預算金額。\" Answer same.\n\n\"112 年的牙醫門診總額預算是什麼數字？\" Answer same.\n\n\"112 年的預算金額能告訴我嗎？\" Answer same.\n\nAll fine.\n\nBut maybe we should incorporate that the unit is hundred million? Eg: \"112 年的預算金額（百萬元）是多少？\". That ensures answer includes unit.\n\nLet's produce final output accordingly.",
+            "reasoning_content": "We need to produce 3-5 natural language queries based on the provided data. Data: table_title: 表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形. X-axis: 年度. Y-axis: 項目. Cell x-axis id meaning: 112 年. Cell y-axis id meaning: 預算數(百萬元). Value: 271500000.\n\nSo the data is: For year 112 (which is 2023?), budget amount (in hundred million) is 271,500,000? Wait: The cell's y-axis id meaning: 預算數(百萬元). So the value is 271500000. That seems like a large number; maybe it's in units of \"hundred million\"? But value is 271,500,000. Might be the budget in hundred million? Let's treat as 271.5 million? Actually 271,500,000 (hundred million) would be 27,150,000,000? But we don't need to interpret.\n\nWe need to ask queries that would have this data as the answer.\n\nWe need 3-5 queries. Each query must be natural, oral, professional but not too formal.\n\nExamples: \"112年的預算數是多少？\" \"請告訴我112年牙醫門診總額的預算數值\" etc.\n\nAlso we can ask about the unit: \"112年的預算數是以百萬元計算嗎?\" But the answer must be this data.\n\nBut each question must have this data as the main or only answer. So we cannot ask something that might have multiple answers.\n\nWe need to ensure each query's answer is this data: \"112 年 預算數(百萬元) = 271500000\".\n\nThus each query must be about that value.\n\nWe can ask different angles: \"112年的預算金額是多少？\", \"112年牙醫門診總額的預算是多少？\", \"112年表5-3的預算數是什麼？\", \"請問112年的預算數為多少？\", \"112年的預算金額為多少百萬元？\".\n\nWe need 3-5 queries.\n\nMake sure each question is natural and professional but not too formal. Avoid official bureaucratic language.\n\nLet's produce 5 queries:\n\n1. \"112 年牙醫門診總額的預算金額是多少？\"\n2. \"表5‑3中，112 年的預算數值為多少百萬元？\"\n3. \"請問 112 年這個試辦計畫的預算是多少？\"\n4. \"112 年的牙醫門診總額預算是什麼數字？\"\n5. \"112 年牙醫門診總額的預算金額能告訴我嗎？\"\n\nBut maybe some duplicates; we need different angles.\n\nLet's think of variations:\n\n- Ask about the numeric value directly: \"112 年的預算數是多少？\"\n\n- Ask about the unit: \"112 年的預算數以百萬元為單位，數值是多少？\"\n\n- Ask about the year: \"在表5-3中，112 年的預算金額為多少？\"\n\n- Ask about the plan: \"這份牙醫門診計畫中，112 年的預算是多少？\"\n\n- Ask about the total: \"牙醫門診總額在 112 年的預算是多少？\"\n\nWe must ensure each answer is just that value. Let's produce them accordingly.\n\nAlso we might ask about difference between other years? But we only have one year. So queries must revolve around that one value.\n\nLet's produce final output:\n\n1. 112 年牙醫門診總額的預算金額是多少？\n2. 表5‑3中，112 年的預算數值以百萬元計算是多少？\n3. 請告訴我這個試辦計畫在 112 年的預算金額。\n4. 112 年的牙醫門診總額預算是什麼數字？\n5. 112 年的預算金額能告訴我嗎？\n\nCheck each question: all answer is 271500000 (maybe with unit). The answer might be \"271,500,000 百萬元\". Wait that's too big. But we don't need to worry.\n\nBut the question \"112 年牙醫門診總額的預算金額是多少？\" The answer is 271500000 (百萬元). Good.\n\n\"表5‑3中，112 年的預算數值以百萬元計算是多少？\" Answer same.\n\n\"請告訴我這個試辦計畫在 112 年的預算金額。\" Answer same.\n\n\"112 年的牙醫門診總額預算是什麼數字？\" Answer same.\n\n\"112 年的預算金額能告訴我嗎？\" Answer same.\n\nAll fine.\n\nBut maybe we should incorporate that the unit is hundred million? Eg: \"112 年的預算金額（百萬元）是多少？\". That ensures answer includes unit.\n\nLet's produce final output accordingly."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1127,
+        "total_tokens": 2339,
+        "completion_tokens": 1212,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"111 年\", \"cell's y-axis id 意思\": \"預算執行數(百萬元)\", \"值\": \"9929280\"}",
+    "raw_response": {
+      "id": "chatcmpl-a9a5d7a114bb030b",
+      "object": "chat.completion",
+      "created": 1765462246,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 111 年牙醫門診總額的預算執行金額是多少百萬元？\n2. 表5‑3 裡顯示的 111 年預算執行數值是幾百萬？\n3. 在牙醫門診總額 12~18 歲青少年口腔提升照護試辦計畫中，111 年的預算執行金額為多少？\n4. 這份表格顯示的 111 年預算執行數值是多少？\n5. 111 年牙醫門診總額的預算執行金額具體是多少百萬元？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 user query sentences about the given data. Data: table title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度. Y-axis: 項目. cell x-axis id meaning: 111 年. cell y-axis id meaning: 預算執行數(百萬元). Value: 9929280. So data indicates for year 111 (presumably 2022?), budget execution amount (in hundred million) is 9929280. Actually 9929280 hundred million? Wait the unit is 百萬元, but value is 9929280. That would be 9,929,280 百萬元? That seems huge. But maybe it's just a number. Anyway.\n\nWe need to generate 3-5 natural language query sentences that a professional might ask, each question should have this data as the main or only answer. Each question should be different angle: maybe ask for budget amount, ask for year, ask for unit, ask for what this figure means, ask about program name, etc.\n\nWe must not use overly formal language. Each sentence moderate length.\n\nWe output lines numbered 1-5.\n\nWe need 3-5 queries. Let's produce 5.\n\nPossible queries:\n\n1. \"這個試辦計畫在111年的預算執行金額是多少？\"\n2. \"111年牙醫門診總額的預算執行數以百萬元為單位，數值是什麼？\"\n3. \"表5-3中顯示的111年預算執行數是幾百萬？\"\n4. \"這份表格顯示的111年度預算執行數值是多少？\"\n5. \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行金額為多少百萬元？\"\n\nBut we need each question to have the data as main or only answer. The data includes year 111 and value 9929280. So each question must be answerable by that number.\n\nLet's craft:\n\n1. \"111年牙醫門診總額預算執行金額是多少百萬元？\"\n2. \"表5-3顯示的111年度預算執行數是幾百萬？\"\n3. \"這份試辦計畫中，111年的預算執行金額為多少？\"\n4. \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行數為多少？\"\n5. \"111年牙醫門診總額的預算執行金額顯示為多少百萬元？\"\n\nAll refer to same data. Ensure natural language, not too formal.\n\nLet's output accordingly.",
+            "reasoning_content": "We need to produce 3-5 user query sentences about the given data. Data: table title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度. Y-axis: 項目. cell x-axis id meaning: 111 年. cell y-axis id meaning: 預算執行數(百萬元). Value: 9929280. So data indicates for year 111 (presumably 2022?), budget execution amount (in hundred million) is 9929280. Actually 9929280 hundred million? Wait the unit is 百萬元, but value is 9929280. That would be 9,929,280 百萬元? That seems huge. But maybe it's just a number. Anyway.\n\nWe need to generate 3-5 natural language query sentences that a professional might ask, each question should have this data as the main or only answer. Each question should be different angle: maybe ask for budget amount, ask for year, ask for unit, ask for what this figure means, ask about program name, etc.\n\nWe must not use overly formal language. Each sentence moderate length.\n\nWe output lines numbered 1-5.\n\nWe need 3-5 queries. Let's produce 5.\n\nPossible queries:\n\n1. \"這個試辦計畫在111年的預算執行金額是多少？\"\n2. \"111年牙醫門診總額的預算執行數以百萬元為單位，數值是什麼？\"\n3. \"表5-3中顯示的111年預算執行數是幾百萬？\"\n4. \"這份表格顯示的111年度預算執行數值是多少？\"\n5. \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行金額為多少百萬元？\"\n\nBut we need each question to have the data as main or only answer. The data includes year 111 and value 9929280. So each question must be answerable by that number.\n\nLet's craft:\n\n1. \"111年牙醫門診總額預算執行金額是多少百萬元？\"\n2. \"表5-3顯示的111年度預算執行數是幾百萬？\"\n3. \"這份試辦計畫中，111年的預算執行金額為多少？\"\n4. \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行數為多少？\"\n5. \"111年牙醫門診總額的預算執行金額顯示為多少百萬元？\"\n\nAll refer to same data. Ensure natural language, not too formal.\n\nLet's output accordingly."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1130,
+        "total_tokens": 1910,
+        "completion_tokens": 780,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"112 年\", \"cell's y-axis id 意思\": \"預算執行數(百萬元)\", \"值\": \"46869832\"}",
+    "raw_response": {
+      "id": "chatcmpl-894a279ab4836047",
+      "object": "chat.completion",
+      "created": 1765462250,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度牙醫門診總額12~18歲青少年口腔提升照護試辦計畫的預算執行數是多少？  \n2. 表5‑3中，112年的預算執行數值為多少？  \n3. 12~18歲青少年口腔提升照護計畫在112年度的預算執行金額是多少？  \n4. 表5‑3顯示的112年度預算執行數是幾百萬元？  \n5. 112年該計畫的預算執行總額為多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language queries that would retrieve the data: table_title: 表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形. x-axis: 年度, y-axis: 項目. cell's x-axis id meaning: 112 年. cell's y-axis id meaning: 預算執行數(百萬元). value: 46869832.\n\nThus the table shows for year 112 (presumably 2023?), budget execution amount in hundred million? Actually value is 46869832, presumably number of something. We need to produce queries that would retrieve this value. The queries must be natural, oral, professional but not too formal. Each query should be unique angle. Each must have this data as main or only answer.\n\nWe need 3-5 queries. Provide numbered list lines.\n\nPossible queries:\n\n1. \"112年度牙醫門診總額12~18歲青少年口腔提升照護試辦計畫的預算執行數是多少？\"\n2. \"請問表5-3中，112年的預算執行數值為多少？\"\n3. \"12~18歲青少年口腔提升照護計畫在112年度的預算執行金額是多少？\"\n4. \"表5-3顯示的112年度預算執行數是幾百萬元？\"\n5. \"112年該計畫的預算執行總額為多少？\"\n\nMake sure each uses different phrasing. Provide exactly 3-5 lines.\n\nLet's produce 5 queries.\n\n",
+            "reasoning_content": "We need to produce 3-5 natural language queries that would retrieve the data: table_title: 表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形. x-axis: 年度, y-axis: 項目. cell's x-axis id meaning: 112 年. cell's y-axis id meaning: 預算執行數(百萬元). value: 46869832.\n\nThus the table shows for year 112 (presumably 2023?), budget execution amount in hundred million? Actually value is 46869832, presumably number of something. We need to produce queries that would retrieve this value. The queries must be natural, oral, professional but not too formal. Each query should be unique angle. Each must have this data as main or only answer.\n\nWe need 3-5 queries. Provide numbered list lines.\n\nPossible queries:\n\n1. \"112年度牙醫門診總額12~18歲青少年口腔提升照護試辦計畫的預算執行數是多少？\"\n2. \"請問表5-3中，112年的預算執行數值為多少？\"\n3. \"12~18歲青少年口腔提升照護計畫在112年度的預算執行金額是多少？\"\n4. \"表5-3顯示的112年度預算執行數是幾百萬元？\"\n5. \"112年該計畫的預算執行總額為多少？\"\n\nMake sure each uses different phrasing. Provide exactly 3-5 lines.\n\nLet's produce 5 queries.\n\n"
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1130,
+        "total_tokens": 1630,
+        "completion_tokens": 500,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"111 年\", \"cell's y-axis id 意思\": \"預算執行率\", \"值\": \"0.036571933701657455\"}",
+    "raw_response": {
+      "id": "chatcmpl-8bd860f332bc2a10",
+      "object": "chat.completion",
+      "created": 1765462253,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 這份表格中，111年的預算執行率是多少？  \n2. 在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫裡，111年的預算執行率顯示的是什麼數值？  \n3. 表5-3裡顯示的111年度預算執行率大約是幾個百分點？  \n4. 你能告訴我表5-3中111年預算執行率的精確數值嗎？  \n5. 這份資料裡，111年牙醫門診總額計畫的預算執行率為多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to generate 3-5 natural language query sentences that would use the given data as answer. Data: table_title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度. Y-axis: 項目. cell's x-axis id 意思：111 年. cell's y-axis id 意思：預算執行率. 值：0.036571933701657455.\n\nThus the data indicates that in year 111 (likely 2022?), the budget execution rate is 0.036571933701657455. That seems low? But anyway.\n\nWe need to produce 3-5 queries that are natural, professional but not too formal, each question must be answered solely by this data. So each question should refer to budget execution rate for year 111, or ask about the value.\n\nWe should avoid referencing other data. So we ask: \"111年的預算執行率是多少？\" \"表5-3中111年預算執行率的數值是什麼？\" \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行率是多少？\" \"這份表格顯示111年預算執行率為多少？\" \"111年的預算執行率值是多少，請告訴我。\"\n\nWe need 3-5 sentences. Each line with numbering.\n\nLet's produce 5 queries. Ensure each question uses different angle: one asks value, one asks ratio, one asks percentage, one asks about the year, one asks about the table. Provide natural language.\n\nLet's produce:\n\n1. 這份表格中，111年的預算執行率是多少？\n2. 在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫裡，111年的預算執行率顯示的是什麼數值？\n3. 表5-3裡顯示的111年度預算執行率大約是幾個百分點？\n4. 你能告訴我表5-3中111年預算執行率的精確數值嗎？\n5. 這份資料裡，111年牙醫門診總額計畫的預算執行率為多少？\n\nCheck each refers to same data. Good.\n\nWe must not include extra content, just numbered lines.\n\nLet's produce final answer.",
+            "reasoning_content": "We need to generate 3-5 natural language query sentences that would use the given data as answer. Data: table_title: \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\". X-axis: 年度. Y-axis: 項目. cell's x-axis id 意思：111 年. cell's y-axis id 意思：預算執行率. 值：0.036571933701657455.\n\nThus the data indicates that in year 111 (likely 2022?), the budget execution rate is 0.036571933701657455. That seems low? But anyway.\n\nWe need to produce 3-5 queries that are natural, professional but not too formal, each question must be answered solely by this data. So each question should refer to budget execution rate for year 111, or ask about the value.\n\nWe should avoid referencing other data. So we ask: \"111年的預算執行率是多少？\" \"表5-3中111年預算執行率的數值是什麼？\" \"在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫中，111年的預算執行率是多少？\" \"這份表格顯示111年預算執行率為多少？\" \"111年的預算執行率值是多少，請告訴我。\"\n\nWe need 3-5 sentences. Each line with numbering.\n\nLet's produce 5 queries. Ensure each question uses different angle: one asks value, one asks ratio, one asks percentage, one asks about the year, one asks about the table. Provide natural language.\n\nLet's produce:\n\n1. 這份表格中，111年的預算執行率是多少？\n2. 在牙醫門診總額12~18歲青少年口腔提升照護試辦計畫裡，111年的預算執行率顯示的是什麼數值？\n3. 表5-3裡顯示的111年度預算執行率大約是幾個百分點？\n4. 你能告訴我表5-3中111年預算執行率的精確數值嗎？\n5. 這份資料裡，111年牙醫門診總額計畫的預算執行率為多少？\n\nCheck each refers to same data. Good.\n\nWe must not include extra content, just numbered lines.\n\nLet's produce final answer."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1132,
+        "total_tokens": 1847,
+        "completion_tokens": 715,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"109 年\", \"cell's y-axis id 意思\": \"預算數 (百萬元)\", \"值\": \"144800000\"}",
+    "raw_response": {
+      "id": "chatcmpl-a1d857b262743d18",
+      "object": "chat.completion",
+      "created": 1765462257,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 109 年的牙醫門診總額超音波根管沖洗計畫預算是多少？\n2. 請告訴我表5-4中109 年的預算數值。\n3. 這份表格顯示109 年的預算是幾百萬？\n4. 在表5-4裡，109 年牙醫門診計畫的預算金額是多少？\n5. 請說明109 年牙醫門診總額超音波根管沖洗計畫的執行情形預算。",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 user query sentences based on the data. Data: table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\" x-axis: 年度; y-axis: 項目; cell's x-axis id meaning: 109 年; cell's y-axis id meaning: 預算數 (百萬元); value: 144800000.\n\nSo we have a table showing budget amount for 109 year: 144,800,000 (presumably in 100,000? Wait value is 144800000 which is 144,800,000? The y-axis id is \"預算數 (百萬元)\" meaning budget amount in hundred million? Actually 百萬元 = 100,000? Wait \"百萬元\" means hundred million? In Chinese, \"百萬元\" means 100 million? Actually \"百萬元\" means \"hundred thousand dollars\"? Wait: In Taiwan, \"百萬元\" means \"hundred million\"? Let's parse: In Chinese, \"百萬\" is one million. So \"百萬元\" is 100 million? Actually \"百萬\" is one million. So \"百萬元\" means hundred million? Let's check: \"百萬\" is one million. So \"百萬元\" is hundred million? Actually \"百萬\" is one million; \"百萬元\" is the same as \"百萬\". So it's one million. So maybe the unit is in ten thousands? I'm not sure. But the value is 144800000. That might be the budget amount in units of 10000? But anyway we just need to generate queries.\n\nWe need 3-5 questions. Each question should be natural, oral, professional but not too formal. Each question should ask something that the answer is based on this data: the budget amount for year 109. We need different angles: maybe ask what was the budget for year 109, ask how much budget allocated for that year, ask what the budget figure is, ask how many millions allocated, ask what was the total cost of the plan in 109 year. Also could ask about the table title or what the table shows.\n\nWe need to ensure each question's answer is only from this data. So we can't ask about other years or other items.\n\nWe need to output each line with numbering and brackets.\n\nLet's produce 5 questions.\n\nPossible questions:\n\n1. 109 年的牙醫門診總額超音波根管沖洗計畫預算是多少？\n2. 請告訴我表5-4中109 年的預算數值。\n3. 這份表格顯示109 年的預算是幾百萬？\n4. 在表5-4裡，109 年牙醫門診計畫的預算金額是多少？\n5. 請說明109 年牙醫門診總額超音波根管沖洗計畫的執行情形預算。\n\nMake sure each answer uses only that data.\n\nCheck each question: Are they all different angles? Yes.\n\nNow output with numbering and brackets.\n\nLet's produce final answer.",
+            "reasoning_content": "We need to produce 3-5 user query sentences based on the data. Data: table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\" x-axis: 年度; y-axis: 項目; cell's x-axis id meaning: 109 年; cell's y-axis id meaning: 預算數 (百萬元); value: 144800000.\n\nSo we have a table showing budget amount for 109 year: 144,800,000 (presumably in 100,000? Wait value is 144800000 which is 144,800,000? The y-axis id is \"預算數 (百萬元)\" meaning budget amount in hundred million? Actually 百萬元 = 100,000? Wait \"百萬元\" means hundred million? In Chinese, \"百萬元\" means 100 million? Actually \"百萬元\" means \"hundred thousand dollars\"? Wait: In Taiwan, \"百萬元\" means \"hundred million\"? Let's parse: In Chinese, \"百萬\" is one million. So \"百萬元\" is 100 million? Actually \"百萬\" is one million. So \"百萬元\" means hundred million? Let's check: \"百萬\" is one million. So \"百萬元\" is hundred million? Actually \"百萬\" is one million; \"百萬元\" is the same as \"百萬\". So it's one million. So maybe the unit is in ten thousands? I'm not sure. But the value is 144800000. That might be the budget amount in units of 10000? But anyway we just need to generate queries.\n\nWe need 3-5 questions. Each question should be natural, oral, professional but not too formal. Each question should ask something that the answer is based on this data: the budget amount for year 109. We need different angles: maybe ask what was the budget for year 109, ask how much budget allocated for that year, ask what the budget figure is, ask how many millions allocated, ask what was the total cost of the plan in 109 year. Also could ask about the table title or what the table shows.\n\nWe need to ensure each question's answer is only from this data. So we can't ask about other years or other items.\n\nWe need to output each line with numbering and brackets.\n\nLet's produce 5 questions.\n\nPossible questions:\n\n1. 109 年的牙醫門診總額超音波根管沖洗計畫預算是多少？\n2. 請告訴我表5-4中109 年的預算數值。\n3. 這份表格顯示109 年的預算是幾百萬？\n4. 在表5-4裡，109 年牙醫門診計畫的預算金額是多少？\n5. 請說明109 年牙醫門診總額超音波根管沖洗計畫的執行情形預算。\n\nMake sure each answer uses only that data.\n\nCheck each question: Are they all different angles? Yes.\n\nNow output with numbering and brackets.\n\nLet's produce final answer."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1120,
+        "total_tokens": 1913,
+        "completion_tokens": 793,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"109 年\", \"cell's y-axis id 意思\": \"預算執行數 (百萬元)\", \"值\": \"58309751\"}",
+    "raw_response": {
+      "id": "chatcmpl-b9252c3211551069",
+      "object": "chat.completion",
+      "created": 1765462262,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 109 年牙醫門診超音波根管沖洗計畫的預算執行金額是多少百萬元？  \n2. 表5‑4 裡 109 年牙醫門診總額超音波根管沖洗計畫執行情形顯示的預算執行數值是什麼？  \n3. 牙醫門診總額超音波根管沖洗計畫在 109 年共執行了多少百萬元？  \n4. 在表5‑4中，109 年牙醫門診超音波根管沖洗計畫的預算執行金額為多少？  \n5. 109 年牙醫門診總額超音波根管沖洗計畫的預算執行數字是什麼？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language queries that would retrieve the specific data: table showing 109 year budget execution amount of ultrasonic root canal irrigation program, value 58,309,751 (百萬元). The table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\". The x-axis is 年度; y-axis is 項目. The cell x-axis id 109 year; y-axis id 預算執行數 (百萬元). Value 58309751.\n\nWe need 3-5 queries that ask about this data. Each query must be natural, oral, professional tone but not too formal. Each must be different angle: e.g., ask for amount for year 109; ask for budget execution amount; ask how much spent; ask in what year etc. Must use this data as main or only answer. So each query's answer is that value.\n\nWe need to output in format:\n\n1. [question]\n2. [question]\n...\n\nWe can produce 5 queries.\n\nMake sure each query uses the data as answer. For example:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的預算執行金額是多少？\n2. 表5-4 裡 109 年牙醫門診總額超音波根管沖洗計畫執行情形的預算執行數值是？\n3. 109 年牙醫門診超音波根管沖洗計畫執行了多少百萬元？\n4. 在表5-4中，109 年牙醫門診超音波根管沖洗計畫的預算執行金額為多少？\n5. 牙醫門診總額超音波根管沖洗計畫在 109 年的預算執行數是？\n\nMake sure each is natural. Avoid formal.\n\nLet's craft them:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的預算執行金額是多少百萬元？\n2. 表5‑4 裡 109 年牙醫門診總額超音波根管沖洗計畫執行情形顯示的預算執行數值是什麼？\n3. 牙醫門診總額超音波根管沖洗計畫在 109 年共執行了多少百萬元？\n4. 在表5‑4中，109 年牙醫門診超音波根管沖洗計畫的預算執行金額為多少？\n5. 109 年牙醫門診總額超音波根管沖洗計畫的預算執行數字是什麼？\n\nEnsure each uses different phrasing.\n\nLet's output accordingly.",
+            "reasoning_content": "We need to produce 3-5 natural language queries that would retrieve the specific data: table showing 109 year budget execution amount of ultrasonic root canal irrigation program, value 58,309,751 (百萬元). The table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\". The x-axis is 年度; y-axis is 項目. The cell x-axis id 109 year; y-axis id 預算執行數 (百萬元). Value 58309751.\n\nWe need 3-5 queries that ask about this data. Each query must be natural, oral, professional tone but not too formal. Each must be different angle: e.g., ask for amount for year 109; ask for budget execution amount; ask how much spent; ask in what year etc. Must use this data as main or only answer. So each query's answer is that value.\n\nWe need to output in format:\n\n1. [question]\n2. [question]\n...\n\nWe can produce 5 queries.\n\nMake sure each query uses the data as answer. For example:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的預算執行金額是多少？\n2. 表5-4 裡 109 年牙醫門診總額超音波根管沖洗計畫執行情形的預算執行數值是？\n3. 109 年牙醫門診超音波根管沖洗計畫執行了多少百萬元？\n4. 在表5-4中，109 年牙醫門診超音波根管沖洗計畫的預算執行金額為多少？\n5. 牙醫門診總額超音波根管沖洗計畫在 109 年的預算執行數是？\n\nMake sure each is natural. Avoid formal.\n\nLet's craft them:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的預算執行金額是多少百萬元？\n2. 表5‑4 裡 109 年牙醫門診總額超音波根管沖洗計畫執行情形顯示的預算執行數值是什麼？\n3. 牙醫門診總額超音波根管沖洗計畫在 109 年共執行了多少百萬元？\n4. 在表5‑4中，109 年牙醫門診超音波根管沖洗計畫的預算執行金額為多少？\n5. 109 年牙醫門診總額超音波根管沖洗計畫的預算執行數字是什麼？\n\nEnsure each uses different phrasing.\n\nLet's output accordingly."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1123,
+        "total_tokens": 1903,
+        "completion_tokens": 780,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"109 年\", \"cell's y-axis id 意思\": \"申報點數(百萬點)\", \"值\": \"58781360\"}",
+    "raw_response": {
+      "id": "chatcmpl-bf2fed91a20664a6",
+      "object": "chat.completion",
+      "created": 1765462266,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 109 年牙醫門診超音波根管沖洗計畫的申報點數是多少？  \n2. 在表5‑4裡，109 年的牙醫門診總額超音波根管沖洗計畫顯示了多少百萬點？  \n3. 表5‑4顯示109 年牙醫門診超音波根管沖洗計畫的總申報點數為何？  \n4. 請問109 年牙醫門診總額超音波根管沖洗計畫的點數具體是多少？  \n5. 表5‑4中，109 年牙醫門診總額超音波根管沖洗計畫的申報點數是幾百萬點？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language questions that would retrieve the data: table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\". x-axis: 年度; y-axis: 項目; cell x-axis id meaning: 109 年; cell y-axis id meaning: 申報點數(百萬點); value: 58781360. So the data is that in year 109, the reported points (in million points) is 58,781,360? Wait value: 58781360. Probably 58,781,360 points? Actually it's 58,781,360? The value is 58,781,360. Might be 58,781,360 points (百萬點). So question examples: \"109 年牙醫門診超音波根管沖洗計畫的申報點數是多少?\" etc. They want 3-5 questions. Use natural language, professional but not too formal. Each question must have this data as answer. Provide 5 lines numbered.\n\nWe need to adhere to format: each line starting with number and period, space, then question. Provide 3-5 questions. Let's produce 5.\n\nPotential questions:\n\n1. 109 年牙醫門診總額超音波根管沖洗計畫的申報點數是多少？\n2. 在表5-4中，109 年的申報點數（百萬點）顯示了多少？\n3. 表5-4顯示109 年牙醫門診超音波根管沖洗計畫的總額為多少點？\n4. 109 年牙醫門診總額超音波根管沖洗計畫的申報點數具體數值是什麼？\n5. 請告訴我表5-4中109 年牙醫門診總額超音波根管沖洗計畫的點數。\n\nBut ensure each question is slightly different angle. Let's craft more varied:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的申報點數是多少？\n2. 在表5-4裡，109 年的牙醫門診總額超音波根管沖洗計畫顯示了多少百萬點？\n3. 表5-4顯示109 年牙醫門診超音波根管沖洗計畫的總申報點數為何？\n4. 請問109 年牙醫門診總額超音波根管沖洗計畫的點數具體是多少？\n5. 表5-4中，109 年牙醫門診總額超音波根管沖洗計畫的申報點數是幾百萬點？\n\nYes. Provide them. Ensure numbering.",
+            "reasoning_content": "We need to produce 3-5 natural language questions that would retrieve the data: table title: \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\". x-axis: 年度; y-axis: 項目; cell x-axis id meaning: 109 年; cell y-axis id meaning: 申報點數(百萬點); value: 58781360. So the data is that in year 109, the reported points (in million points) is 58,781,360? Wait value: 58781360. Probably 58,781,360 points? Actually it's 58,781,360? The value is 58,781,360. Might be 58,781,360 points (百萬點). So question examples: \"109 年牙醫門診超音波根管沖洗計畫的申報點數是多少?\" etc. They want 3-5 questions. Use natural language, professional but not too formal. Each question must have this data as answer. Provide 5 lines numbered.\n\nWe need to adhere to format: each line starting with number and period, space, then question. Provide 3-5 questions. Let's produce 5.\n\nPotential questions:\n\n1. 109 年牙醫門診總額超音波根管沖洗計畫的申報點數是多少？\n2. 在表5-4中，109 年的申報點數（百萬點）顯示了多少？\n3. 表5-4顯示109 年牙醫門診超音波根管沖洗計畫的總額為多少點？\n4. 109 年牙醫門診總額超音波根管沖洗計畫的申報點數具體數值是什麼？\n5. 請告訴我表5-4中109 年牙醫門診總額超音波根管沖洗計畫的點數。\n\nBut ensure each question is slightly different angle. Let's craft more varied:\n\n1. 109 年牙醫門診超音波根管沖洗計畫的申報點數是多少？\n2. 在表5-4裡，109 年的牙醫門診總額超音波根管沖洗計畫顯示了多少百萬點？\n3. 表5-4顯示109 年牙醫門診超音波根管沖洗計畫的總申報點數為何？\n4. 請問109 年牙醫門診總額超音波根管沖洗計畫的點數具體是多少？\n5. 表5-4中，109 年牙醫門診總額超音波根管沖洗計畫的申報點數是幾百萬點？\n\nYes. Provide them. Ensure numbering."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1122,
+        "total_tokens": 1900,
+        "completion_tokens": 778,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"109 年\", \"cell's y-axis id 意思\": \"執行院所數\", \"值\": \"3174\"}",
+    "raw_response": {
+      "id": "chatcmpl-84fc25525b287aee",
+      "object": "chat.completion",
+      "created": 1765462270,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 109 年牙醫門診超音波根管沖洗計畫執行院所數是多少？  \n2. 今年（109 年）有多少家牙醫院所參與超音波根管沖洗計畫？  \n3. 在表5-4中，109 年執行院所數顯示多少？  \n4. 109 年牙醫門診超音波根管沖洗計畫的執行院所總數為多少？  \n5. 表中 109 年的執行院所數值是什麼？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language queries that refer to the data: table showing number of institutions that executed a certain plan in 109 year (which is 2020? Actually 109 year in ROC is 2020). Value: 3174. So queries should ask about that. They must be different angles, each answer is solely that number. Avoid formal tone. Each line numbered.\n\nWe need 3-5 queries. Let's produce 5.\n\nPossible queries:\n1. 109 年牙醫門診超音波根管沖洗計畫執行院所數是多少？\n2. 今年（109 年）有多少家牙醫院所參與超音波根管沖洗計畫？\n3. 在表5-4中，109 年執行院所數顯示多少？\n4. 109 年牙醫門診超音波根管沖洗計畫的執行院所總數為多少？\n5. 表中 109 年的執行院所數值是什麼？\n\nMake sure each is slightly different phrasing, natural, professional but not too formal.\n\nLet's produce output lines numbered 1-5.",
+            "reasoning_content": "We need to produce 3-5 natural language queries that refer to the data: table showing number of institutions that executed a certain plan in 109 year (which is 2020? Actually 109 year in ROC is 2020). Value: 3174. So queries should ask about that. They must be different angles, each answer is solely that number. Avoid formal tone. Each line numbered.\n\nWe need 3-5 queries. Let's produce 5.\n\nPossible queries:\n1. 109 年牙醫門診超音波根管沖洗計畫執行院所數是多少？\n2. 今年（109 年）有多少家牙醫院所參與超音波根管沖洗計畫？\n3. 在表5-4中，109 年執行院所數顯示多少？\n4. 109 年牙醫門診超音波根管沖洗計畫的執行院所總數為多少？\n5. 表中 109 年的執行院所數值是什麼？\n\nMake sure each is slightly different phrasing, natural, professional but not too formal.\n\nLet's produce output lines numbered 1-5."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1119,
+        "total_tokens": 1505,
+        "completion_tokens": 386,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/test_model/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度\", \"table's y-axis\": \"項目\", \"cell's x-axis id 意思\": \"109 年\", \"cell's y-axis id 意思\": \"執行人數\", \"值\": \"292648\"}",
+    "raw_response": {
+      "id": "chatcmpl-b6f9af2c24d52c32",
+      "object": "chat.completion",
+      "created": 1765462273,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 109 年牙醫門診超音波根管沖洗計畫的執行人數是多少？\n2. 表5-4 裡顯示 109 年執行人數為多少？\n3. 這份資料中，109 年的執行人數數值是什麼？\n4. 在牙醫門診總額超音波根管沖洗計畫中，109 年共執行了多少人？\n5. 請告訴我表5-4 109 年的執行人數是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 user query sentences. Data: table_title: 表5-4 牙醫門診總額超音波根管沖洗計畫執行情形. x-axis: 年度; y-axis: 項目; cell's x-axis id meaning: 109 年; cell's y-axis id meaning: 執行人數; value: 292648.\n\nWe need natural language questions, each referencing this data as sole answer. Must be 3-5 sentences. Let's produce 5.\n\nExamples:\n\n1. 109 年牙醫門診超音波根管沖洗計畫執行人數是多少？\n2. 這份表格顯示 109 年的執行人數為多少？\n3. 請問表5-4 中 109 年執行人數的數值是什麼？\n4. 109 年牙醫門診超音波根管沖洗計畫共有多少人執行？\n5. 在表5-4 裡，109 年的執行人數是多少？\n\nMake sure each is distinct angle.\n\nReturn in required format.\n\nLet's craft.\n\n",
+            "reasoning_content": "We need to produce 3-5 user query sentences. Data: table_title: 表5-4 牙醫門診總額超音波根管沖洗計畫執行情形. x-axis: 年度; y-axis: 項目; cell's x-axis id meaning: 109 年; cell's y-axis id meaning: 執行人數; value: 292648.\n\nWe need natural language questions, each referencing this data as sole answer. Must be 3-5 sentences. Let's produce 5.\n\nExamples:\n\n1. 109 年牙醫門診超音波根管沖洗計畫執行人數是多少？\n2. 這份表格顯示 109 年的執行人數為多少？\n3. 請問表5-4 中 109 年執行人數的數值是什麼？\n4. 109 年牙醫門診超音波根管沖洗計畫共有多少人執行？\n5. 在表5-4 裡，109 年的執行人數是多少？\n\nMake sure each is distinct angle.\n\nReturn in required format.\n\nLet's craft.\n\n"
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1118,
+        "total_tokens": 1500,
+        "completion_tokens": 382,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  }
+]

@@ -44,14 +44,16 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
     執行 Excel 解析流程
 
     流程:
-        1. Parser: 解析 Excel 檔案
+        1. Parser: 解析 Excel 檔案（支援單檔或目錄批次處理）
         2. Transform: 轉換為 AugmenterInput 格式
         3. Output: 儲存結果
 
     Args:
         config: 配置字典，包含 parser、input、output 等設定
             必要欄位:
-                - input.file_path: 輸入 Excel 檔案路徑
+                - input.file_path: 輸入 Excel 檔案路徑（單檔）
+                或
+                - input.input_dir: 輸入 Excel 檔案目錄（批次處理）
             可選欄位:
                 - output.dir: 輸出目錄（預設使用 timestamp 目錄）
                 - input.skip_parser: 是否跳過 Parser 步驟（預設 False）
@@ -62,21 +64,50 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
         Dict 包含:
             - success: bool, 是否成功
             - parsed_data_path: str, Parser 輸出路徑
-            - parsed_data: Dict, 解析後的數據
+            - parsed_data: Dict 或 List[Dict], 解析後的數據
             - augmenter_inputs: List, 轉換為 AugmenterInput 格式的列表
             - total_count: int, 處理的數據筆數
             - error: str (可選), 錯誤訊息
     """
     try:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        quiet = not config.get('verbose', True)  # 提前定義 quiet 變數
 
         # 從 config 讀取參數
-        input_file = Path(config['input']['file_path'])
+        input_file = config.get('input', {}).get('file_path')
+        input_dir = config.get('input', {}).get('input_dir')
+
+        # 檢查輸入參數
+        if not input_file and not input_dir:
+            raise ValueError("必須提供 input.file_path 或 input.input_dir")
+
+        if input_file and input_dir:
+            raise ValueError("不能同時提供 input.file_path 和 input.input_dir，請只選擇一個")
+
+        # 處理單檔或批次模式
+        batch_mode = input_dir is not None
+
+        if batch_mode:
+            input_dir = Path(input_dir)
+            if not input_dir.exists():
+                raise FileNotFoundError(f"輸入目錄不存在 - {input_dir}")
+            if not input_dir.is_dir():
+                raise ValueError(f"input_dir 必須是目錄 - {input_dir}")
+
+            # 收集所有 Excel 檔案
+            excel_extensions = ['.xlsx', '.xlsm', '.xltx', '.xltm']
+            input_files = [f for f in input_dir.iterdir() if f.suffix in excel_extensions]
+
+            if not input_files:
+                raise ValueError(f"在目錄 {input_dir} 中找不到 Excel 檔案")
+        else:
+            input_file = Path(input_file)
+            input_files = [input_file]
+
         skip_parser = config.get('input', {}).get('skip_parser', False)
         parsed_data_path = config.get('input', {}).get('parsed_data_path')
         if parsed_data_path:
             parsed_data_path = Path(parsed_data_path)
-        quiet = not config.get('verbose', True)
 
         # 設定輸出目錄
         output_dir = config.get('output', {}).get('dir')
@@ -93,7 +124,13 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
             print("=" * 70)
             print("Excel Parser LLM Service")
             print("=" * 70)
-            print(f"輸入檔案: {input_file}")
+            if batch_mode:
+                print(f"輸入模式: 批次處理")
+                print(f"輸入目錄: {input_dir}")
+                print(f"檔案數量: {len(input_files)}")
+            else:
+                print(f"輸入模式: 單檔處理")
+                print(f"輸入檔案: {input_files[0]}")
             print(f"輸出目錄: {output_dir}")
             print("=" * 70)
 
@@ -111,10 +148,6 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
             if not quiet:
                 print(f"  已載入 {len(result.get('cells', []))} 個儲存格")
         else:
-            # 驗證輸入檔案
-            if not input_file.exists():
-                raise FileNotFoundError(f"輸入檔案不存在 - {input_file}")
-
             if not quiet:
                 print("\n步驟 1/2: 使用 LLM 解析 Excel 檔案")
                 print("-" * 70)
@@ -125,25 +158,46 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
                 model=config['parser']['llm']['model'],
                 api_key=config['parser']['llm']['api_key'],
                 use_openrouter=config['parser']['llm']['use_openrouter'],
-                max_retries=config['parser']['llm']['max_retries']
+                max_retries=config['parser']['llm']['max_retries'],
+                prompt_key=config['parser'].get('prompt_name', 'excel_parser'),
             )
 
-            result = parser_llm.parse_excel_with_llm(input_file)
-            parser_llm.save_result(result, parsed_output_path)
+            # 批次處理或單檔處理
+            if batch_mode:
+                results = parser_llm.batch_parse_excel_with_llm(input_files)
+                # 保存批次結果
+                parser_llm.save_result(results, parsed_output_path)
+                result = results  # 用於後續處理
 
-            if not quiet:
-                print(f"\n解析結果摘要：")
-                print(f"  標題: {result.get('title', 'N/A')}")
-                print(f"  X 軸: {result.get('x-axis', 'N/A')}")
-                print(f"  Y 軸: {result.get('y-axis', 'N/A')}")
-                print(f"  重要儲存格數: {len(result.get('cells', []))}")
+                if not quiet:
+                    print(f"\n批次解析完成，共處理 {len(results)} 個檔案")
+            else:
+                result = parser_llm.parse_excel_with_llm(input_files[0])
+                parser_llm.save_result(result, parsed_output_path)
+
+                if not quiet:
+                    print(f"\n解析結果摘要：")
+                    print(f"  標題: {result.get('title', 'N/A')}")
+                    print(f"  X 軸: {result.get('x-axis', 'N/A')}")
+                    print(f"  Y 軸: {result.get('y-axis', 'N/A')}")
+                    print(f"  重要儲存格數: {len(result.get('cells', []))}")
 
         # ==================== 步驟 2: Transform ====================
         if not quiet:
             print("\n步驟 2/2: 轉換為 AugmenterInput 格式")
             print("-" * 70)
 
-        inputs = ExcelParserLLM.transform_to_augmenterInput(result)
+        # 處理批次或單檔結果
+        if batch_mode:
+            # 批次處理：result 是列表，需要對每個結果進行轉換
+            all_inputs = []
+            for single_result in result:
+                inputs = ExcelParserLLM.transform_to_augmenterInput(single_result)
+                all_inputs.extend(inputs)
+            inputs = all_inputs
+        else:
+            # 單檔處理：result 是字典
+            inputs = ExcelParserLLM.transform_to_augmenterInput(result)
 
         if not quiet:
             print(f"  已轉換 {len(inputs)} 個儲存格")
@@ -153,6 +207,8 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
             print("\n" + "=" * 70)
             print("Parser 處理完成！")
             print("=" * 70)
+            if batch_mode:
+                print(f"批次模式: 處理 {len(result)} 個檔案")
             print(f"總共處理: {len(inputs)} 筆資料")
             print(f"\n輸出檔案:")
             print(f"  Parser 輸出: {parsed_output_path}")
@@ -160,6 +216,8 @@ def excel_parse(config: Dict[str, Any]) -> Dict[str, Any]:
 
         return {
             "success": True,
+            "batch_mode": batch_mode,
+            "file_count": len(result) if batch_mode else 1,
             "parsed_data_path": str(parsed_output_path.resolve()),
             "parsed_data": result,
             "augmenter_inputs": inputs,

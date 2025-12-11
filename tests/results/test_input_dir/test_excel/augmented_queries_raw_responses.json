@@ -1,0 +1,432 @@
+[
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度（105年~114年，部分包含1-6月註7）\", \"table's y-axis\": \"計畫項目（如預算數、預算執行數、申報點數等）\", \"cell's x-axis id 意思\": \"111年\", \"cell's y-axis id 意思\": \"預算數(百萬元)\", \"值\": \"271500000\"}",
+    "raw_response": {
+      "id": "chatcmpl-a8bc5a56b697df5b",
+      "object": "chat.completion",
+      "created": 1765438041,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 111年青少年口腔健康提升照護試辦計畫的預算編列是多少？（單位：百萬元）\n2. 這份牙醫門診計畫在111年度的預算數據是多少？\n3. 我需要確認105年到114年間，青少年口腔提升照護試辦計畫中111年的預算金額是幾億？\n4. 有沒有提供過111年「牙醫門診總額」計畫的預算數據，如果有，數值是多少？\n5. 在表5-3的資料中，111年度青少年口腔健康照護試辦計畫的「預算數」欄位數值是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1305,
+        "total_tokens": 1498,
+        "completion_tokens": 193,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度（105年~114年，部分包含1-6月註7）\", \"table's y-axis\": \"計畫項目（如預算數、預算執行數、申報點數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"預算數(百萬元)\", \"值\": \"271500000\"}",
+    "raw_response": {
+      "id": "chatcmpl-8e5e092a0f1ed8cb",
+      "object": "chat.completion",
+      "created": 1765438045,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年「牙醫門診總額12~18歲青少年口腔提升照護試辦計畫」的預算編列金額是多少（單位：百萬元）？\n\n2. 這個青少年口腔保健計畫在112年度的預算編列數據中，預算數（百萬元）為何值？\n\n3. 有沒有資料可以查到112年「牙醫門診總額12~18歲青少年口腔提升照護試辦計畫」的預算數（單位：百萬元）是多少？\n\n4. 在表5-3中，112年「預算數」欄位的數值是多少（單位：百萬元）？\n\n5. 我需要確認112年度這個青少年口腔照護計畫的預算編列數字（百萬元），是否為2,715,000,000元？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1305,
+        "total_tokens": 1547,
+        "completion_tokens": 242,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度（105年~114年，部分包含1-6月註7）\", \"table's y-axis\": \"計畫項目（如預算數、預算執行數、申報點數等）\", \"cell's x-axis id 意思\": \"114年\", \"cell's y-axis id 意思\": \"預算數(百萬元)\", \"值\": \"171500000\"}",
+    "raw_response": {
+      "id": "chatcmpl-94f941acff85daa8",
+      "object": "chat.completion",
+      "created": 1765438050,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 114年度「牙醫門診總額12~18歲青少年口腔提升照護試辦計畫」的預算編列金額是多少？\n\n2. 「青少年口腔照護試辦計畫」在114年（部分包含前6月）的預算數是多少百萬元？\n\n3. 這個口腔照護試辦計畫在114年（含部分月份）的預算數據是多少？單位要用百萬元表示。\n\n4. 表5-3中，114年度（含部分月份）預算數的欄位值是多少？請用百萬為單位回答。\n\n5. 我需要確認一下，這個青少年口腔健康照護試辦案的114年度（部分包含前6月）預算編列總額是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1305,
+        "total_tokens": 1523,
+        "completion_tokens": 218,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度（105年~114年，部分包含1-6月註7）\", \"table's y-axis\": \"計畫項目（如預算數、預算執行數、申報點數等）\", \"cell's x-axis id 意思\": \"111年\", \"cell's y-axis id 意思\": \"預算執行數(百萬元)\", \"值\": \"9929280\"}",
+    "raw_response": {
+      "id": "chatcmpl-9c361c191b3d7cfe",
+      "object": "chat.completion",
+      "created": 1765438054,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 111年牙醫口腔提升照護計畫的預算執行金額是多少？單位是百萬，請直接告知數字。\n2. 在表5-3的資料中，12~18歲青少年口腔提升照護試辦計畫在111年度的「預算執行數」有沒有公開？\n3. 我需要確認111年這個年度，牙醫門診總額計畫在預算執行上實際到手的金額是幾億？\n4. 有沒有辦法告訴我這個計畫在111年「預算執行數」的具體數值（單位：百萬元）？\n5. 表5-3的數據顯示，111年牙醫門診總額青少年口腔照護計畫的「預算執行數」是9,929.28百萬元嗎？請確認一下。",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1306,
+        "total_tokens": 1557,
+        "completion_tokens": 251,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-3.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-3 牙醫門診總額12~18歲青少年口腔提升照護試辦計畫執行情形\", \"table's x-axis\": \"年度（105年~114年，部分包含1-6月註7）\", \"table's y-axis\": \"計畫項目（如預算數、預算執行數、申報點數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"預算執行數(百萬元)\", \"值\": \"46869832\"}",
+    "raw_response": {
+      "id": "chatcmpl-9c91562a83fb5639",
+      "object": "chat.completion",
+      "created": 1765438059,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度「牙醫門診總額12~18歲青少年口腔提升照護試辦計畫」的預算執行金額是多少（單位：百萬元）？\n\n2. 從105年到114年這段期間，哪一年「預算執行數」達到將近4,687百萬元（約4.69億元）？\n\n3. 根據表5-3的資料，112年這個計畫在「預算執行數」這一欄位的數字是多少？單位要轉換成新臺幣元。\n\n4. 比較105年到114年間，哪一年「預算執行數」的金額明顯高於其他年份（特別是接近4,687百萬元）？\n\n5. 如果想了解112年度「牙醫門診總額青少年口腔提升照護計畫」的實際支出情形，應該查哪一欄位？那一年該欄位的數值是多少（單位：百萬元）？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1307,
+        "total_tokens": 1588,
+        "completion_tokens": 281,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度（107年~114年，部分欄位為1-6月註6）\", \"table's y-axis\": \"計畫執行項目（預算、執行情形、申報點數、院所數、人數、件數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"預算數 (百萬元)\", \"值\": \"144800000\"}",
+    "raw_response": {
+      "id": "chatcmpl-8d35826a94ecc952",
+      "object": "chat.completion",
+      "created": 1765438064,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度牙醫門診總額超音波根管沖洗計畫的預算編列金額是多少？\n2. 在表5-4的資料中，112年牙醫門診超音波根管沖洗計畫預算數（單位：百萬元）是多少？\n3. 牙醫門診超音波根管沖洗計畫在112年的預算編列情形如何？單位是什麼？\n4. 有沒有辦法確認112年牙醫門診根管治療相關計畫（超音波沖洗部分）的預算編列數字？\n5. 表5-4中112年度牙醫根管治療技術改善計畫（超音波沖洗項目）的預算數據是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1308,
+        "total_tokens": 1528,
+        "completion_tokens": 220,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度（107年~114年，部分欄位為1-6月註6）\", \"table's y-axis\": \"計畫執行項目（預算、執行情形、申報點數、院所數、人數、件數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"預算執行數 (百萬元)\", \"值\": \"58309751\"}",
+    "raw_response": {
+      "id": "chatcmpl-91bd15578ac36048",
+      "object": "chat.completion",
+      "created": 1765438068,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度牙醫門診總額超音波根管沖洗計畫的預算執行數是多少（單位：百萬元）？\n2. 這份表格顯示112年根管沖洗計畫的預算執行情形有多少資金（單位：萬元）？\n3. 表5-4中112年超音波根管沖洗計畫的預算執行數對應的金額是多少？\n4. 請問在107年到114年間，哪一年（112年）的根管沖洗計畫預算執行數最高（已知數據為5830.9751百萬元）？\n5. 這份計畫執行情形表格中，112年度預算執行數（單位：百萬元）的數值是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1310,
+        "total_tokens": 1538,
+        "completion_tokens": 228,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度（107年~114年，部分欄位為1-6月註6）\", \"table's y-axis\": \"計畫執行項目（預算、執行情形、申報點數、院所數、人數、件數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"申報點數(百萬點)\", \"值\": \"58781360\"}",
+    "raw_response": {
+      "id": "chatcmpl-a0b6a2f06a9c0a66",
+      "object": "chat.completion",
+      "created": 1765438072,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度牙醫門診超音波根管沖洗計畫的申報點數（百萬點）是多少？\n2. 請問從107年到114年，哪一年超音波根管沖洗計畫的申報點數（百萬點）達到5.878億？\n3. 牙醫門診超音波根管沖洗計畫在112年的執行情形中，申報點數是否有明顯變動或特殊記錄（如部分欄位為1-6月註6）？\n4. 這份表格顯示的「申報點數（百萬點）」在112年度有沒有超過5.8億？\n5. 請確認112年度牙醫門診超音波根管沖洗計畫執行情形的申報點數（百萬點）數值是否為58781360？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1309,
+        "total_tokens": 1556,
+        "completion_tokens": 247,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度（107年~114年，部分欄位為1-6月註6）\", \"table's y-axis\": \"計畫執行項目（預算、執行情形、申報點數、院所數、人數、件數等）\", \"cell's x-axis id 意思\": \"112年\", \"cell's y-axis id 意思\": \"--執行院所數\", \"值\": \"3174\"}",
+    "raw_response": {
+      "id": "chatcmpl-be06246ee3341526",
+      "object": "chat.completion",
+      "created": 1765438077,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 112年度牙醫門診超音波根管沖洗計畫總共有多少家醫療院所參與執行？\n\n2. 請問從107年到114年（部分為上半年），牙醫門診超音波根管沖洗計畫的執行院所數，112年是否是最高的那一年？\n\n3. 在表5-4中，112年牙醫門診超音波根管沖洗計畫的執行院所數為3174家，這個數字相較於其他年度（如113年或114年）是屬於高還是低？\n\n4. 除了院所數，你能告訴我112年牙醫門診超音波根管沖洗計畫還有哪些執行項目（如預算、人數、件數等）的資料嗎？\n\n5. 如果想了解牙醫門診超音波根管沖洗計畫在112年的整體執行情形（如預算、人數等），這張表5-4是否能提供相關數據？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1304,
+        "total_tokens": 1602,
+        "completion_tokens": 298,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "/tmp2/howard/auto-gen-multimodel/tests/testcases/input_dir/excel/表5-4.xlsx",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "{\"table_title\": \"表5-4 牙醫門診總額超音波根管沖洗計畫執行情形\", \"table's x-axis\": \"年度（107年~114年，部分欄位為1-6月註6）\", \"table's y-axis\": \"計畫執行項目（預算、執行情形、申報點數、院所數、人數、件數等）\", \"cell's x-axis id 意思\": \"113年1-6月註6\", \"cell's y-axis id 意思\": \"申報根管治療項目有併報超音波根管治療之件數占率(A/Z)註2、3\", \"值\": \"0.6754\"}",
+    "raw_response": {
+      "id": "chatcmpl-bd73a0c86b575150",
+      "object": "chat.completion",
+      "created": 1765438083,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 113年度上半年（1-6月）申報根管治療時有併報超音波治療的案件占比是多少？\n\n2. 從107年到114年，牙醫門診超音波根管沖洗計畫執行中，哪一年申報併報超音波治療的件數占率最高？\n\n3. 這份表格中，申報根管治療項目有併報超音波治療的件數占率（A/Z）在113年1-6月的數據是多少（單位為小數點後四位）？\n\n4. 在表5-4中，超音波根管沖洗計畫執行情形是否有提供院所數或人數的明細統計？\n\n5. 113年度前半年（1-6月）超音波根管治療併報率（0.6754）是否代表所有牙醫門診總額中超音波治療的比例？還是僅限於根管治療項目？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1338,
+        "total_tokens": 1617,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  }
+]

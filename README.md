@@ -1,91 +1,130 @@
 # Auto-Gen MultiModel
 
-自動根據輸入文件類型生成問題的工具，支援多種文件格式。
+自動根據輸入文件類型生成問題的工具，支援 Excel、圖片、PDF 三種格式。
 
-## 功能
+![工作流程](metadata/img/workflow.png)
 
-- 圖片 → OCR → 生成問題
-- Excel → 解析 → 生成問題
-- PDF → 解析 → 生成問題（規劃中）
+## 特色
+
+1. **多格式支援** - 支援 PDF、PNG、Excel 等多種文件格式
+2. **多模型支援** - 相容 Mistral AI、GPT、Gemma 等不同 LLM 模型
+3. **UI 可視化** - 提供 Web UI 介面，方便操作與管理
 
 ## 快速開始
 
-### 使用 main.py（推薦）
-
-`main.py` 是統一的入口程式，會自動檢測文件類型並選擇對應的 Pipeline。
-
-#### 基本用法
-
 ```bash
-# 自動檢測文件類型並處理
-python core/main.py --input <文件路徑>
-```
+# 使用配置文件執行（推薦）
+python core/main.py --config configs/pipeline.yml
 
-#### Excel 文件處理
-
-```bash
-# 使用預設配置
-python core/main.py --input data/example.xlsx
-
-# 使用自訂配置
-python core/main.py --input data/example.xlsx --config configs/excel_augment.example.yml
-```
-
-#### 圖片文件處理
-
-```bash
-# 完整流程：OCR + 生成問題
-python core/main.py --input data/image.png \
-  --ocr-config configs/ocr_config.yml \
-  --gen-ques-config configs/gen_ques_config.yml
+# 覆蓋配置中的輸入文件
+python core/main.py --config configs/pipeline.yml --input data/example.xlsx
 ```
 
 ### 命令列參數
 
-| 參數 | 簡寫 | 預設值 | 說明 |
-|------|------|--------|------|
-| `--input` | `-i` | *必填* | 輸入文件路徑（Excel 或圖片） |
-| `--type` | `-t` | `auto` | 文件類型：`excel`、`image` 或 `auto`（自動檢測） |
-| `--config` | `-c` | `configs/excel_augment.example.yml` | Excel Pipeline 配置檔路徑 |
-| `--ocr-config` | - | `configs/ocr_config.yml` | OCR 配置檔路徑（圖片 Pipeline） |
-| `--gen-ques-config` | - | `configs/gen_ques_config.yml` | 生成問題配置檔路徑（圖片 Pipeline） |
-| `--ocr-only` | - | `False` | 僅執行 OCR，不執行生成問題（圖片 Pipeline） |
+| 參數 | 說明 |
+|------|------|
+| `--config`, `-c` | 配置檔路徑（預設：`configs/pipeline.yml`） |
+| `--input`, `-i` | 輸入文件路徑（可覆蓋配置文件設定） |
+| `--type`, `-t` | 強制指定類型：`excel`、`image`、`pdf`、`auto` |
 
-### 支援的文件格式
+## 配置文件說明
 
-#### Excel 格式
-- `.xlsx` - Excel 2007+ 格式
-- `.xls` - Excel 97-2003 格式
-- `.xlsm` - Excel 啟用巨集的活頁簿
-- `.xlsb` - Excel 二進位活頁簿
+配置文件使用 YAML 格式，範例請參考 [configs/pipeline.yml](configs/pipeline.yml)
 
-#### 圖片格式
-- `.png` - PNG 圖片
-- `.jpg` / `.jpeg` - JPEG 圖片
-- `.bmp` - 點陣圖
-- `.gif` - GIF 圖片
-- `.tiff` - TIFF 圖片
-- `.webp` - WebP 圖片
+### 基本結構
 
-## 配置文件
+```yaml
+pipeline_type: auto  # 自動檢測文件類型
+input: data/example.xlsx
 
-### Excel Pipeline 配置
+metadata:  # 選用
+  test_name: "測試名稱"
 
-參考 [configs/excel_augment.example.yml](configs/excel_augment.example.yml)
+excel:
+  # Excel 設定...
 
-### 圖片 Pipeline 配置
+image:
+  # 圖片設定...
 
-1. **OCR 配置**：參考 [configs/ocr_config.yml](configs/ocr_config.yml)
-2. **生成問題配置**：參考 [configs/gen_ques_config.yml](configs/gen_ques_config.yml)
+pdf:
+  # PDF 設定...
+```
 
-## 輸出
+### Excel 設定
 
-- Excel Pipeline：
-  - 解析後的數據：`results/parsed_data.json`
-  - 生成的問題：`results/augmented_queries.json`
-  - LLM 原始回應：`results/augmented_queries_raw_responses.json`
+```yaml
+excel:
+  output_dir: results/excel/
 
-- 圖片 Pipeline：
-  - OCR 結果：`results/ocr_results.json`
-  - 生成的問題：`results/augmented_queries.json`
-  - LLM 原始回應：`results/augmented_queries_raw_responses.json`
+  parser:
+    prompt_name: excel_parser
+    llm:
+      url: http://localhost:8000/v1/chat/completions
+      model: your-model-name
+      api_key: null
+
+  augmenter:
+    prompt_name: default
+    mode: vllm
+    vllm:
+      url: http://localhost:8000/v1/chat/completions
+      model_name: your-model-name
+      max_tokens: 4096
+      temperature: 0.7
+```
+
+### Image 設定
+
+```yaml
+image:
+  ocr:
+    output_dir: results/ocr/
+    engine: dotsocr  # 或 paddle
+    mode: vllm
+    vllm:
+      url: http://localhost:8000/v1/chat/completions
+      model_name: your-ocr-model
+      max_tokens: 4096
+
+  gen_ques:
+    output_dir: results/ocr/
+    mode: vllm
+    prompt_name: default
+    vllm:
+      url: http://localhost:8000/v1/chat/completions
+      model_name: your-model-name
+      max_tokens: 4096
+```
+
+### PDF 設定
+
+```yaml
+pdf:
+  conversion:
+    dpi: 200
+    format: PNG
+    max_size: 1024
+
+  ocr:
+    # 同 image.ocr 設定
+
+  gen_ques:
+    # 同 image.gen_ques 設定
+```
+
+### vLLM 重要參數
+
+所有 Pipeline 都需要配置 vLLM 連接：
+
+- `url`: vLLM 服務地址
+- `model_name`: 模型名稱
+- `max_tokens`: 最大生成長度
+- `temperature`: 溫度參數（0-1）
+- `prompt_name`: Prompt 模板名稱
+
+## 支援格式
+
+- **Excel**: `.xlsx`, `.xls`, `.xlsm`, `.xlsb`
+- **圖片**: `.png`, `.jpg`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, `.webp`
+- **PDF**: `.pdf`

@@ -6,23 +6,23 @@
 pipeline_type: auto
 
 # 輸入文件路徑（目錄包含多種格式）
-input: tests/testcases/input_dir/mix
+input: tests/testcases/test_model/png
 
 # Metadata（選用）
 metadata:
-  test_name: "test_mix"
-  description: "測試混合格式檔案處理（目錄中包含 Excel、PDF、Image）"
+  test_name: "test_model"
+  description: "測試模型"
 
 # Excel Pipeline 設定（如果檢測到 Excel 檔案）
 excel:
   skip_parser: false
-  output_dir: "tests/results/test_input_dir/"
+  output_dir: "tests/results/test_model/excel"
 
   parser:
     prompt_name: excel_parser
     llm:
-      url: "http://192.168.1.78:3132/v1/chat/completions"
-      model: mistralai3
+      url: "http://192.168.1.78:3111/v1/chat/completions"
+      model: gpt-oss-20b
       api_key: null
       use_openrouter: false
       max_retries: 3
@@ -32,8 +32,8 @@ excel:
     mode: vllm
 
     vllm:
-      url: http://192.168.1.78:3132/v1/chat/completions
-      model_name: mistralai3
+      url: http://192.168.1.78:3111/v1/chat/completions
+      model_name: gpt-oss-20b
       max_tokens: 4096
       temperature: 0.7
       top_p: 0.9
@@ -45,7 +45,7 @@ excel:
 # Image Pipeline 設定（如果檢測到圖片檔案）
 image:
   ocr:
-    output_dir: tests/results/test_input_dir/
+    output_dir: tests/results/test_model/png
     engine: dotsocr
     mode: vllm
 
@@ -62,12 +62,12 @@ image:
     recursive: true
 
   gen_ques:
-    output_dir: tests/results/test_input_dir/
+    output_dir: tests/results/test_model/png
     mode: vllm
 
     vllm:
-      url: http://192.168.1.78:3132/v1/chat/completions
-      model_name: mistralai3
+      url: http://192.168.1.78:3111/v1/chat/completions
+      model_name: gpt-oss-20b
       max_tokens: 4096
       temperature: 0.7
       top_p: 0.9
@@ -89,7 +89,7 @@ pdf:
     max_size: 1024
 
   ocr:
-    output_dir: tests/results/test_input_dir/
+    output_dir: tests/results/test_model/pdf
     engine: dotsocr
     mode: vllm
 
@@ -106,12 +106,12 @@ pdf:
     recursive: true
 
   gen_ques:
-    output_dir: tests/results/test_input_dir/
+    output_dir: tests/results/test_model/pdf
     mode: vllm
 
     vllm:
-      url: http://192.168.1.78:3132/v1/chat/completions
-      model_name: mistralai3
+      url: http://192.168.1.78:3111/v1/chat/completions
+      model_name: gpt-oss-20b
       max_tokens: 4096
       temperature: 0.7
       top_p: 0.9

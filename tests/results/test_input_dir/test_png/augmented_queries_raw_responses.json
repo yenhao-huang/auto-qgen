@@ -1,0 +1,217 @@
+[
+  {
+    "source_path": "tests/testcases/input_dir/png/(檔案下載)(公告)109年度獎助布建住宿式長照機構公共化資源計畫_page_0001.png",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "衛生福利部 公告\n\n發文日期：中華民國109年10月21日\n\n發文字號：衛部額字第1091960822號\n\n附件：申請作業須知1份\n\n主旨：公告本部109年度辦理「獎助布建住宿式長照機構公共化資源計畫(第三次公告)」(以下稱本計畫)申請作業須知。\n\n依據：行政院105年12月19日院臺衛字第1050037149號函核定長期照顧十年計畫2.0、「長期照顧服務資源發展獎助辦法」辦理。\n\n公告事項：\n\n一、有關本計畫之「申請作業須知」可至本部官方網站(https://www.mohw.gov.tw/lp-4637-1.html)之公告訊息區下載。\n\n二、申請單位應於109年10月31日前檢送計畫申請書向本部提出申請。\n\n部長 陳時中",
+    "raw_response": {
+      "id": "chatcmpl-8f0590d7fda86b62",
+      "object": "chat.completion",
+      "created": 1765438208,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 衛福部「109年度獎助布建住宿式長照機構公共化資源計畫」第三次公告的申請截止日期是幾號？\n2. 想要申請衛福部109年度「住宿式長照機構公共化資源計畫」，該從哪裡下載最新的申請作業須知？\n3. 這份衛部額字第1091960822號公告背後的核心依據是什麼長期照顧相關計畫或辦法？\n4. 如果我想參與衛福部109年「住宿式長照機構獎助計畫」，但不確定申請時間，該找誰或哪個管道確認？\n5. 衛福部109年「住宿式長照機構公共化資源計畫」的第三次公告，是否有特別強調需要提交什麼附件？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1459,
+        "total_tokens": 1700,
+        "completion_tokens": 241,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "tests/testcases/input_dir/png/(檔案下載)(公告)113年11月22日衛部口字第1132061573號_page_0001.png",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "衛生福利部 公告\n\n發文日期：中華民國113年11月22日\n\n發文字號：衛部口字第1132061573號\n\n附件：114年度牙髓病科專科醫師訓練機構認定合格名單、資格有效期限及訓練容量\n\n主旨：公告114年度牙髓病科專科醫師訓練機構認定合格名單、資格有效期限及訓練容量。\n\n依據：牙醫專科醫師分科及甄審辦法第9條。\n\n部長 邱泰源",
+    "raw_response": {
+      "id": "chatcmpl-8bd0ea9c9257e3dc",
+      "object": "chat.completion",
+      "created": 1765438212,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 114年度牙髓病科專科醫師訓練機構的認定名單和資格有效期限是什麼時候公告的？\n2. 哪些醫療機構在114年度獲得衛福部認定可以培訓牙髓病科專科醫師？有沒有附上訓練容量？\n3. 衛福部的公告（衛部口字第1132061573號）主要是為了公布什麼訓練相關資訊？\n4. 我需要查一下牙醫專科醫師分科辦法中，與牙髀病科訓練機構認定相關的規定條文是哪一條？\n5. 這份公告中提到的「資格有效期限」是針對哪一年的訓練機構認定名單？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1337,
+        "total_tokens": 1564,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "tests/testcases/input_dir/png/(檔案下載)109年11月27日函-補充申請規範_page_0001.png",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "# 衛生福利部 函\n\n地址：115204 台北市南港區忠孝東路6段488號\n\n聯絡人：周保宏\n\n聯絡電話：(02)8590-7467\n\n傳真：(02)8590-7080\n\n電子郵件：md0428@mohw.gov.tw\n\n受文者：如正、副本行文單位\n\n發文日期：中華民國109年11月27日\n\n發文字號：衛部心字第1090039857號\n\n速別：最速件\n\n密等及解密條件或保密期限：\n\n附件：\n\n主旨：有關本部109年11月16日衛部心字第1091762113號公告，公開徵求110年度「精神衛生機構團體獎勵計畫」案，補充規範如說明段，惠請周知貴轄符合前揭計畫申請資格之團體知悉辦理，請查照。\n\n說明：有關旨揭計畫需求說明書，所載獎勵項目「(三)提供陪同病人就醫及相關心理支持與衛生教育服務」，涵括以「同儕支持」服務模式，辦理多元性之陪同個案就醫及社會參與，並提供個案其心理支持與衛生教育服務。\n\n正本：地方政府衛生局\n\n副本：",
+    "raw_response": {
+      "id": "chatcmpl-9735824e975fead4",
+      "object": "chat.completion",
+      "created": 1765438216,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 衛福部在109年11月27日的公告中，哪些團體可以申請「精神衛生機構團體獎勵計畫」的「同儕支持服務」？\n2. 這份衛部心字第1090039857號公文是關於哪個日期的公告補充規範？補充了什麼內容？\n3. 「精神衛生機構團體獎勵計畫」中「提供陪同病人就醫及相關心理支持」的服務範圍具體包含哪些項目？\n4. 貴單位如果想申請110年度「精神衛生機構團體獎勵計畫」，應該聯繫衛福部的哪個聯絡人或電話？\n5. 這份發文字號為衛部心字第1090039857號的公文，是屬於最速件還是普通件？有附件嗎？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1563,
+        "total_tokens": 1810,
+        "completion_tokens": 247,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "tests/testcases/input_dir/png/(檔案下載)衛生福利部112-113年度「護理機構重點趨勢主題培訓課程研發補助計畫」申請作業須知_page_0002.png",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "<table>\n  <tr>\n    <td>衛生福利部112-113年度「護理機構重點趨勢主題培訓課程研發補助計畫」申<br>請作業須知</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>壹、依據</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>貳、計畫說明</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>參、計畫目的</td>\n    <td>5</td>\n  </tr>\n  <tr>\n    <td>肆、計畫執行期程</td>\n    <td>5</td>\n  </tr>\n  <tr>\n    <td>伍、補助內容</td>\n    <td>7</td>\n  </tr>\n  <tr>\n    <td>陸、補助計畫審查內容及相關事項</td>\n    <td>15</td>\n  </tr>\n  <tr>\n    <td>柒、申請補助程序及應備文件</td>\n    <td>15</td>\n  </tr>\n  <tr>\n    <td>捌、經費請領、撥付及核銷原則</td>\n    <td>16</td>\n  </tr>\n  <tr>\n    <td>玖、受補助對象應配合事項</td>\n    <td>18</td>\n  </tr>\n  <tr>\n    <td>拾、其他事項</td>\n    <td>18</td>\n  </tr>\n  <tr>\n    <td>附件1：申請表格式（申請參加時使用）</td>\n    <td>20</td>\n  </tr>\n  <tr>\n    <td>附件2：申請計畫書格式（申請參加時使用）</td>\n    <td>21</td>\n  </tr>\n  <tr>\n    <td>附件3：經費明細表格式（申請參加時使用）</td>\n    <td>24</td>\n  </tr>\n  <tr>\n    <td>附件4：成果報告格式（結案核銷時使用）</td>\n    <td>27</td>\n  </tr>\n  <tr>\n    <td>附件5：領據格式（結案核銷時使用）</td>\n    <td>29</td>\n  </tr>\n  <tr>\n    <td>附件6：收支明細表格式（結案核銷時使用）</td>\n    <td>30</td>\n  </tr>\n  <tr>\n    <td>附件7：公職人員利益衝突迴避法第14條第2項公職人員及關係人身分關係揭<br>露表</td>\n    <td>31</td>\n  </tr>\n</table>",
+    "raw_response": {
+      "id": "chatcmpl-aaaf09a1f2f6efd8",
+      "object": "chat.completion",
+      "created": 1765438221,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 衛生福利部的「護理機構重點趨勢主題培訓課程研發補助計畫」申請書需要哪些附件？有沒有提供格式範本？\n\n2. 這個補助計畫的執行時間跨幾年？我需要先了解整體的進度規劃是怎麼安排的。\n\n3. 補助審查的標準有哪些重點？第幾頁有詳細說明審查的細節和相關要求？\n\n4. 申請這個計畫時，經費明細表的格式在哪裡可以找到？我需要確認資料填寫的規範。\n\n5. 如果補助金額領取完畢後，剩餘未使用的經費該怎麼處理？相關核銷原則在第幾頁有提到？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1913,
+        "total_tokens": 2134,
+        "completion_tokens": 221,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "tests/testcases/input_dir/png/(檔案下載)衛生福利部112-113年度「護理機構重點趨勢主題培訓課程研發補助計畫」申請作業須知_page_0027.png",
+    "mode": "vllm",
+    "model_name": "mistralai3",
+    "ocr_text": "培訓主題：\n\n日期： 年 月 日",
+    "raw_response": {
+      "id": "chatcmpl-8ea9d50349295f05",
+      "object": "chat.completion",
+      "created": 1765438226,
+      "model": "mistralai3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 這次培訓的主題是什麼？能告訴我具體內容嗎？\n2. 年月日是哪一天？請確認一下這場培訓的具體日期安排。\n3. 我需要確認這次培訓的日期安排，有沒有在資料中記載？\n4. 請問培訓主題是否包含具體時間（年、月、日）的詳細資訊？\n5. 這份資料是否包含培訓的日期（年、月、日）和主題的完整對照表？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": null,
+            "reasoning_content": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1182,
+        "total_tokens": 1334,
+        "completion_tokens": 152,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  }
+]

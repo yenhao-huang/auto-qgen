@@ -1,0 +1,64 @@
+# 測試配置 - PDF Pipeline
+# 先將 PDF 轉換為圖片，再進行 OCR 和問題生成
+
+# Pipeline 類型
+pipeline_type: pdf
+
+# 輸入文件路徑（可以是單檔或目錄）
+input: tests/testcases/input_dir/pdf
+
+# Metadata（選用）
+metadata:
+  test_name: "test_pdf"
+  description: "測試 PDF 檔案處理"
+
+# PDF Pipeline 設定
+pdf:
+  # PDF 轉圖片設定
+  conversion:
+    # DPI 解析度
+    dpi: 200
+    # 輸出圖片格式
+    format: PNG
+    # 最大圖片尺寸
+    max_size: 1024
+
+  # OCR 設定
+  ocr:
+    output_dir: tests/results/test_input_dir/test_pdf
+    engine: dotsocr
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.76:3264/v1/chat/completions
+      model_name: /workspace/llm_model
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      timeout: 3600
+
+    recursive: true
+
+  # 生成問題設定
+  gen_ques:
+    output_dir: tests/results/test_input_dir/test_pdf
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.78:3132/v1/chat/completions
+      model_name: mistralai3
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: True
+      limit_llmoutput_scheme: false
+
+    prompt_name: default
+    verify_connection: False
+
+  # 是否只執行 OCR（不執行問題生成）
+  ocr_only: false

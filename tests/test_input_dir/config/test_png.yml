@@ -1,0 +1,63 @@
+# 測試配置 - Image (PNG) Pipeline
+# 對圖片檔案進行 OCR 和問題生成
+
+# Pipeline 類型
+pipeline_type: image
+
+# 輸入文件路徑（可以是單檔或目錄）
+input: tests/testcases/input_dir/png
+
+# Metadata（選用）
+metadata:
+  test_name: "test_png"
+  description: "測試 PNG 圖片檔案處理"
+
+# Image Pipeline 設定
+image:
+  # OCR 設定
+  ocr:
+    output_dir: tests/results/test_input_dir/test_png
+    engine: dotsocr
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.76:3264/v1/chat/completions
+      model_name: /workspace/llm_model
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      timeout: 3600
+
+    # 是否遞迴搜尋子目錄（當輸入為目錄時）
+    recursive: true
+
+  # 生成問題設定
+  gen_ques:
+    # 輸出目錄路徑
+    output_dir: tests/results/test_input_dir/test_png
+
+    # LLM 模式：vllm 或 openrouter
+    mode: vllm
+
+    # VLLM 配置
+    vllm:
+      url: http://192.168.1.78:3132/v1/chat/completions
+      model_name: mistralai3
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: True
+      limit_llmoutput_scheme: false
+
+    # Prompt 名稱
+    prompt_name: default
+
+    # 初始化時是否驗證 API 連線
+    verify_connection: False
+
+  # 是否只執行 OCR（不執行問題生成）
+  ocr_only: false

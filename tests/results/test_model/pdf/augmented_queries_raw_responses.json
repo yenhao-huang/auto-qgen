@@ -1,0 +1,88 @@
+[
+  {
+    "source_path": "tests/testcases/test_model/pdf_images/1111207162322696_1/1111207162322696_1_page_0001.png",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "經濟部商業司 函\n\n103\n臺北市大同區南京西路163號2樓之27\n\n機關地址:10015 臺北市福州街15號\n承辦人:江麗萍\n電話:23212200分機:8321\n傳真:23942702\n電子信箱:lpchiang@moea.gov.tw\n\n受文者:美商鐳能科技有限公司\n\n發文日期:中華民國111年11月25日\n發文字號:經商一字第11100761230號\n速別:普通件\n密等及解密條件或保密期限:\n附件:\n\n主旨：據報貴公司(統一編號：83153332)登記於臺北市大同區南京西路163號2樓之27辦事處有他遷不明情事，請於111年12月30日前辦理辦事處所在地變更登記，逾期未變更者，本部將依法辦理，請查照。\n\n說明：\n\n一、依臺北市商業處111年11月23日北市商二字第1116033149號函轉旨揭地址所有權人111年11月18日申請書辦理。\n\n二、按公司法第386條第2項及第3項規定：「外國公司設置辦事處後，無意繼續設置者，應向主管機關申請廢止登記。辦事處代表人缺位或辦事處他遷不明時，主管機關得依職權限期令外國公司指派或辦理所在地變更；屆期仍不指派或辦理變更者，主管機關得廢止其辦事處之登記。」\n\n三、次按公司法第387條第1項授權訂定公司登記辦法第4條規定，公司及外國公司登記事項如有變更者，應於變更後十五日內，向主管機關申請為變更之登記。準此，貴公司所屬在臺辦事處如有相關情事，請依上開各規定，於期限內檢具相關文件向本部辦理有關登記。",
+    "raw_response": {
+      "id": "chatcmpl-b61be9e16feda884",
+      "object": "chat.completion",
+      "created": 1765462297,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 美商鐳能科技有限公司需要在什麼日期之前辦理辦事處地址變更？  \n2. 這封公文的發文字號是什麼？  \n3. 受文者的公司統一編號是多少？  \n4. 這份文件的主旨是什麼？  \n5. 如果我想聯繫承辦人，電話和傳真分別是多少？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language query sentences based on the provided data. The data is basically a letter from Ministry of Economic Affairs (MOEA) to \"美商鐳能科技有限公司\" about office address change. We need to generate 3-5 possible user queries. They must be natural, not too formal, each different angle, each answer uniquely from this data.\n\nWe should output numbered list 1-5, each query sentence on its own line.\n\nWe need to consider the data: There's a letter number, date, address, contact info, subject, explanation. The queries could ask about:\n\n- Deadline for address change (111年12月30日)\n- Where is the office located (163號2樓之27)\n- Who is the responsible person (江麗萍)\n- Phone number or fax\n- What is the subject line\n- What is the MOEA office address (福州街15號)\n- The letter number\n- The date of letter\n- The recipient\n- The company registration number (統一編號：83153332)\n- The reference to company law article 386 etc.\n\nWe need 3-5 queries. Provide 5 queries. Each must be natural, not too formal. Each query must be answerable by the data.\n\nLet's produce:\n\n1. \"美商鐳能科技有限公司需要在什麼日期之前辦理辦事處地址變更？\"\n\n2. \"這封公文的發文字號是什麼？\"\n\n3. \"受文者的公司統一編號是多少？\"\n\n4. \"這份文件的主旨是什麼？\"\n\n5. \"如果我想聯繫承辦人，電話和傳真分別是多少？\"\n\nCheck each: answerable.\n\nWe must ensure each question uses different angle.\n\nWe need to output only the queries, numbered 1-5 each line.\n\nLet's produce final.",
+            "reasoning_content": "We need to produce 3-5 natural language query sentences based on the provided data. The data is basically a letter from Ministry of Economic Affairs (MOEA) to \"美商鐳能科技有限公司\" about office address change. We need to generate 3-5 possible user queries. They must be natural, not too formal, each different angle, each answer uniquely from this data.\n\nWe should output numbered list 1-5, each query sentence on its own line.\n\nWe need to consider the data: There's a letter number, date, address, contact info, subject, explanation. The queries could ask about:\n\n- Deadline for address change (111年12月30日)\n- Where is the office located (163號2樓之27)\n- Who is the responsible person (江麗萍)\n- Phone number or fax\n- What is the subject line\n- What is the MOEA office address (福州街15號)\n- The letter number\n- The date of letter\n- The recipient\n- The company registration number (統一編號：83153332)\n- The reference to company law article 386 etc.\n\nWe need 3-5 queries. Provide 5 queries. Each must be natural, not too formal. Each query must be answerable by the data.\n\nLet's produce:\n\n1. \"美商鐳能科技有限公司需要在什麼日期之前辦理辦事處地址變更？\"\n\n2. \"這封公文的發文字號是什麼？\"\n\n3. \"受文者的公司統一編號是多少？\"\n\n4. \"這份文件的主旨是什麼？\"\n\n5. \"如果我想聯繫承辦人，電話和傳真分別是多少？\"\n\nCheck each: answerable.\n\nWe must ensure each question uses different angle.\n\nWe need to output only the queries, numbered 1-5 each line.\n\nLet's produce final."
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1555,
+        "total_tokens": 2053,
+        "completion_tokens": 498,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  },
+  {
+    "source_path": "tests/testcases/test_model/pdf_images/1111207162322696_1/1111207162322696_1_page_0002.png",
+    "mode": "vllm",
+    "model_name": "gpt-oss-20b",
+    "ocr_text": "正本：美商錙能科技有限公司、梁梓恒君\n\n副本：\n\n經濟部商業司",
+    "raw_response": {
+      "id": "chatcmpl-bda2fa996c57d1ee",
+      "object": "chat.completion",
+      "created": 1765462299,
+      "model": "gpt-oss-20b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 正本中列出的公司名稱是什麼？  \n2. 正本中提到的個人姓名是誰？  \n3. 副本裡面顯示的是哪個政府機關？  \n4. 這份文件的正本包含哪些實體？  \n5. 副本裡面所指的機關名稱為何？",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": [],
+            "reasoning": "We need to produce 3-5 natural language query sentences based on the given data. The data: \"ocr_result：正本：美商錙能科技有限公司、梁梓恒君\n\n副本：\n\n經濟部商業司\"\n\nSo the data includes the OCR result: 正本 (original copy): \"美商錙能科技有限公司、梁梓恒君\". 副本: \"經濟部商業司\".\n\nWe need to produce 3-5 user query sentences. They must be natural, somewhat professional, but not overly formal. Each question must have this data as the sole or main answer. Each question should be different angle: ask different fields, details, phrasing.\n\nWe need to output in format:\n\n1. [first query]\n2. [second query]\n...\n\nProbably 5 queries. Let's think of possible queries:\n\n- Who is listed as the original copy in the OCR result? (Answer: 美商錙能科技有限公司、梁梓恒君)\n- Which organization appears in the copy section? (Answer: 經濟部商業司)\n- Who are the parties mentioned in the OCR result? (Answer: 美商錙能科技有限公司, 梁梓恒君)\n- Which company is mentioned in the OCR result? (Answer: 美商錙能科技有限公司)\n- Who is the individual associated with the company in the OCR result? (Answer: 梁梓恒君)\n\nBut we need 3-5 queries. Ensure each uses different angle.\n\nLet's produce 5 queries:\n\n1. \"請問 OCR 結果中提到的正本公司名稱是什麼？\"\n2. \"在副本裡面，哪個機關被列為負責單位？\"\n3. \"OCR 結果裡面提到的個人名字是誰？\"\n4. \"這份文件中，正本部分提到的公司與個人分別是哪些？\"\n5. \"副本裡面顯示的機構名稱是什麼？\"\n\nBut we need to ensure each answer is this data. Let's refine:\n\nWe have only one line of data: \"正本：美商錙能科技有限公司、梁梓恒君\" and \"副本：經濟部商業司\".\n\nSo queries should revolve around these.\n\nWe can ask:\n\n- \"正本中列出的公司名稱是什麼？\"\n- \"正本中列出的個人姓名是誰？\"\n- \"副本中提到的機關名稱是什麼？\"\n- \"這份文件的正本包含哪些實體？\"\n- \"副本顯示的組織是什麼？\"\n\nBut we need natural, professional, not too formal.\n\nLet's produce 5 queries accordingly.\n\nMake sure each line starts with number and dot.\n\nLet's produce:\n\n1. 正本裡面提到的公司名稱是什麼？\n2. 正本裡面還有其他人名嗎？是哪位？\n3. 副本裡面顯示的是哪個政府機關？\n4. 這份文件的正本包含哪些實體？\n5. 副本顯示的機關名稱是什麼？\n\nBut we might need to avoid repeating too similar phrasing. Let's vary:\n\n1. 正本中列出的公司名稱是什麼？\n2. 正本中提到的個人姓名是誰？\n3. 副本裡面顯示的是哪個部門？\n4. 這份文件的正本包含哪些單位？\n5. 副本裡面所指的機關名稱為何？\n\nOk.\n\nLet's output in required format.\n\n",
+            "reasoning_content": "We need to produce 3-5 natural language query sentences based on the given data. The data: \"ocr_result：正本：美商錙能科技有限公司、梁梓恒君\n\n副本：\n\n經濟部商業司\"\n\nSo the data includes the OCR result: 正本 (original copy): \"美商錙能科技有限公司、梁梓恒君\". 副本: \"經濟部商業司\".\n\nWe need to produce 3-5 user query sentences. They must be natural, somewhat professional, but not overly formal. Each question must have this data as the sole or main answer. Each question should be different angle: ask different fields, details, phrasing.\n\nWe need to output in format:\n\n1. [first query]\n2. [second query]\n...\n\nProbably 5 queries. Let's think of possible queries:\n\n- Who is listed as the original copy in the OCR result? (Answer: 美商錙能科技有限公司、梁梓恒君)\n- Which organization appears in the copy section? (Answer: 經濟部商業司)\n- Who are the parties mentioned in the OCR result? (Answer: 美商錙能科技有限公司, 梁梓恒君)\n- Which company is mentioned in the OCR result? (Answer: 美商錙能科技有限公司)\n- Who is the individual associated with the company in the OCR result? (Answer: 梁梓恒君)\n\nBut we need 3-5 queries. Ensure each uses different angle.\n\nLet's produce 5 queries:\n\n1. \"請問 OCR 結果中提到的正本公司名稱是什麼？\"\n2. \"在副本裡面，哪個機關被列為負責單位？\"\n3. \"OCR 結果裡面提到的個人名字是誰？\"\n4. \"這份文件中，正本部分提到的公司與個人分別是哪些？\"\n5. \"副本裡面顯示的機構名稱是什麼？\"\n\nBut we need to ensure each answer is this data. Let's refine:\n\nWe have only one line of data: \"正本：美商錙能科技有限公司、梁梓恒君\" and \"副本：經濟部商業司\".\n\nSo queries should revolve around these.\n\nWe can ask:\n\n- \"正本中列出的公司名稱是什麼？\"\n- \"正本中列出的個人姓名是誰？\"\n- \"副本中提到的機關名稱是什麼？\"\n- \"這份文件的正本包含哪些實體？\"\n- \"副本顯示的組織是什麼？\"\n\nBut we need natural, professional, not too formal.\n\nLet's produce 5 queries accordingly.\n\nMake sure each line starts with number and dot.\n\nLet's produce:\n\n1. 正本裡面提到的公司名稱是什麼？\n2. 正本裡面還有其他人名嗎？是哪位？\n3. 副本裡面顯示的是哪個政府機關？\n4. 這份文件的正本包含哪些實體？\n5. 副本顯示的機關名稱是什麼？\n\nBut we might need to avoid repeating too similar phrasing. Let's vary:\n\n1. 正本中列出的公司名稱是什麼？\n2. 正本中提到的個人姓名是誰？\n3. 副本裡面顯示的是哪個部門？\n4. 這份文件的正本包含哪些單位？\n5. 副本裡面所指的機關名稱為何？\n\nOk.\n\nLet's output in required format.\n\n"
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "prompt_tokens": 1076,
+        "total_tokens": 1949,
+        "completion_tokens": 873,
+        "prompt_tokens_details": null
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "kv_transfer_params": null
+    }
+  }
+]

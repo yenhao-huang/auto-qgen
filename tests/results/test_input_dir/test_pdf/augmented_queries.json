@@ -1,0 +1,156 @@
+[
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111207162322696_1/1111207162322696_1_page_0001.png",
+    "ocr_text": "經濟部商業司 函\n\n103\n\n臺北市大同區南京西路163號2樓之27\n\n受文者：美商鐳能科技有限公司\n\n發文日期：中華民國111年11月25日\n\n發文字號：經商一字第11100761230號\n\n速別：普通件\n\n密等及解密條件或保密期限：\n\n附件：\n\n機關地址：10015 臺北市福州街15號\n\n承辦人：江麗萍\n\n電話：23212200分機：8321\n\n傳真：23942702\n\n電子信箱：lpchiang@moea.gov.tw\n\n主旨：據報貴公司(統一編號：83153332)登記於臺北市大同區南京西路163號2樓之27辦事處有他遷不明情事，請於111年12月30日前辦理辦事處所在地變更登記，逾期未變更者，本部將依法辦理，請查照。\n\n說明：\n\n一、依臺北市商業處111年11月23日北市商二字第1116033149號函轉旨揭地址所有權人111年11月18日申請書辦理。\n\n二、按公司法第386條第2項及第3項規定：「外國公司設置辦事處後，無意繼續設置者，應向主管機關申請廢止登記。辦事處代表人缺位或辦事處他遷不明時，主管機關得依職權限期令外國公司指派或辦理所在地變更；屆期仍不指派或辦理變更者，主管機關得廢止其辦事處之登記。」\n\n三、次按公司法第387條第1項授權訂定公司登記辦法第4條規定，公司及外國公司登記事項如有變更者，應於變更後十五日內，向主管機關申請為變更之登記。準此，貴公司所屬在臺辦事處如有相關情事，請依上開各規定，於期限內檢具相關文件向本部辦理有關登記。",
+    "questions": [
+      "美商鐳能科技（統一編號83153332）在台北大同區南京西路163號的辦事處現在被列為「他遷不明」，經濟部為什麼會發函通知他們辦理地址變更？",
+      "這份公文是經濟部商業司於111年11月25日寄給美商鐳能科技的，請問如果他們超過12月30日還沒處理，會有什麼後果？",
+      "經濟部這份公文的承辦人是誰？聯絡電話和信箱是多少，以便後續聯繫？",
+      "公文中提到「他遷不明」的依據是台北市商業處轉來的申請書，請問這份申請書是哪一天由地址所有權人提出的？",
+      "美商鐳能科技需要在多少天內完成辦事處地址變更登記？公司法規定的變更時限是幾天，而這份函文設定的期限又是多少天？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111207162322696_1/1111207162322696_1_page_0002.png",
+    "ocr_text": "正本：美商錙能科技有限公司、梁梓恒君\n副本：\n\n經濟部商業司",
+    "questions": [
+      "這張 OCR 結果上的正本是給美商錙能科技有限公司的，但副本是寄給誰的？",
+      "經濟部商業司在這份 OCR 記錄中出現的角色是什麼（例如：收件方、發件方還是其他）？",
+      "如果我要找這份公文，應該搜尋哪兩家單位之間的往來記錄？",
+      "在這張 OCR 輸出結果中，哪一家公司名稱（梁梓恒君）與「美商錙能科技有限公司」一起出現？",
+      "這份 OCR 資料裡提到的兩個實體是哪兩個（一個是公司，一個是政府單位）？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111216114642100_1/1111216114642100_1_page_0001.png",
+    "ocr_text": "經濟部 公告\n\n發文日期：中華民國111年12月15日\n\n發文字號：經授標字第11120051230號\n\n附件：如文\n\n主旨：公告制定CNS 61850-7-6「電力公用事業自動化之通訊網路及系統－第7-6部：使用CNS 61850定義基本應用剖繪(BAP)之指導綱要」國家標準等七種、修訂CNS 60335-2-25「家用和類似用途電器－安全性－第2-25部：微波爐與複合型微波爐之個別規定」國家標準一種。\n\n依據：國家標準制定辦法第十四條。\n\n公告事項：\n\n一、制定國家標準七種(如目錄)。\n\n二、修訂國家標準一種(如目錄)。\n\n部長 王美花",
+    "questions": [
+      "經濟部最近新制定的「電力公用事業自動化通訊標準」CNS 61850-7-6 是什麼內容？有沒有公告日期可以參考？",
+      "我需要找到「家用微波爐安全標準」CNS 60335-2-25 的最新修訂版本，這份公告裡有提到嗎？修訂日期是幾號？",
+      "經濟部在111年12月公布了七種新國家標準，其中包含哪幾個與電力或家電相關的標準？可以告訴我目錄的內容嗎？",
+      "我需要確認經濟部這次發文（經授標字第11120051230號）是否涉及「基本應用剖繪（BAP）」的規範？具體是什麼指導綱要？",
+      "王美花部長簽署的這份標準公告，主要依據的是《國家標準制定辦法》的哪一條規定？可以幫我找出來嗎？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111216114642100_1/1111216114642100_1_page_0002.png",
+    "ocr_text": "# 國家標準公告目錄\n\n## 制定國家標準目錄\n\n<table><thead><tr><th>總號</th><th>類號</th><th>標準名稱</th></tr></thead><tbody><tr><td>61850-7-6</td><td>X2030-7-6</td><td>電力公用事業自動化之通訊網路及系統-第7-6部:使用CNS 61850<br>定義基本應用剖繪(BAP)之指導綱要<br>Communication networks and systems for power utility automation – Part<br>7-6: Guideline for definition of basic application profiles (BAPs) using<br>IEC 61850</td></tr><tr><td>61970-453</td><td>X2031-453</td><td>能源管理系統應用程式介面(EMS-API)-第453部:圖布局剖繪<br>Energy management system application program interface (EMS-API) –<br>Part 453: Diagram layout profile</td></tr><tr><td>61970-556</td><td>X2031-556</td><td>能源管理系統應用程式介面(EMS-API)-第556部:CIM圖形交換格<br>式(CIM/G)<br>Energy management system application program interface (EMS-API) –<br>Part 556: CIM based graphic exchange format (CIM/G)</td></tr><tr><td>62056-5-3</td><td>X2032-5-3</td><td>電力計量資料交換-DLMS/COSEM套組-第5-3部:DLMS/COSEM<br>應用層<br>Electricity metering data exchange – The DLMS/COSEM suite – Part 5-3:<br>DLMS/COSEM application layer</td></tr><tr><td>62351-4</td><td>X2024-4</td><td>電力系統管理及關聯資訊交換-資料及通訊安全-第4部:包括MMS<br>及衍生之剖繪<br>Power systems management and associated information exchange – Data<br>and communications security – Part 4: Profiles including MMS and<br>derivatives</td></tr><tr><td>62443-2-4</td><td>X6143-2-4</td><td>工業自動化及控制系統之安全性-第2-4部:IACS服務提供者之安全<br>計畫要求事項<br>Security for industrial automation and control systems – Part 2-4: Security<br>program requirements for IACS service providers</td></tr><tr><td>62443-3-3</td><td>X6143-3-3</td><td>工業通訊網路一網路及系統安全-第3-3部:系統安全要求事項及安<br>全等級<br>Industrial communication networks – Network and system security – Part<br>3-3: System security requirements and security levels</td></tr></tbody></table>\n\n## 修訂國家標準目錄\n\n<table><thead><tr><th>總號</th><th>類號</th><th>標準名稱</th></tr></thead><tbody><tr><td>60335-2-25</td><td>C4547-2-25</td><td>家用和類似用途電器—安全性—第2-25部:微波爐與複合型微波爐之<br>個別規定<br>Household and similar electrical appliances – Safety – Part 2-25:<br>Particular requirements for microwave ovens, including combination<br>microwave ovens</td></tr></tbody></table>",
+    "questions": [
+      "我需要找關於「IEC 61850標準中定義Basic Application Profile（BAP）的指導綱要」的國家標準編號和類號是什麼？",
+      "請問哪一個國家標準規範了「能源管理系統（EMS）中CIM圖形交換格式（CIM/G）」？",
+      "在電力系統安全標準中，哪一個標準適用於「工業自動化與控制系統（IACS）服務提供者的安全計畫要求」？",
+      "我需要確認「DLMS/COSEM套組應用層」的國家標準總號和類號，這項標準在電力計量資料交換中使用。",
+      "請問有哪些國家標準涉及「工業通訊網路安全等級」的系統安全要求？並請標註其總號和類號。"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111216114642100_1/1111216114642100_1_page_0003.png",
+    "ocr_text": "<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td>\n     CNS 61850-7-6\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td>\n     電力公用事業自動化之通訊網路及系統─第7-6部:使用CNS 61850定義基本應用剖繪(BAP)之指導綱要\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td>\n     Communication networks and systems for power utility automation - Part 7-6: Guideline for definition of Basic Application Profiles (BAPs) using IEC 61850\n    </td>\n   </tr>\n   <tr>\n    <td>\n     制定重點概要\n    </td>\n    <td>\n     1.著重於建構應用程序/功能設定文件,並定義基本應用剖繪(BAP)之方法。此基本應用剖繪為自動化變電所內部及相互間之操作提供框架。\n     <br/>\n     2.主要制定內容: 剖繪之方法論、使用BAP模板之配電自動化功能“反向閉鎖”的BAP示例、使用BAP模板之“有載分接頭切換器之狀態監視診斷功能”的BAP示例、使用BAP模板之保護功能“線路測距保護”的BAP示例、BAP反向閉鎖(無程序匯流排)之BAIOP示例及“有載分接頭切換器狀態監視診斷功能”之BAP的BAIOP示例等。\n    </td>\n   </tr>\n  </table>\n\n<table>\n  <tbody>\n    <tr>\n      <th scope=\"row\">標準總號</th>\n      <td>CNS 61970-453</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">標準名稱</th>\n      <td>能源管理系統應用程式介面(EMS-API)—第453部：圖布局剖繪</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">英文名稱</th>\n      <td>Energy management system application program interface (EMS-API) – Part 453:Diagram layout profile</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">制定重點概要</th>\n      <td>1.定義控制中心組件間傳輸之數據內容及交換機制,包括交換圖表一般用例,以及CIM數據鍵指引。<br>2.主要制定內容<br>圖布局交換剖繪、圖形化顯現、資料實例化及編碼等。</td>\n    </tr>\n  </tbody>\n</table>\n\n<table>\n  <tbody>\n    <tr>\n      <th scope=\"row\">標準總號</th>\n      <td>CNS 61970-556</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">標準名稱</th>\n      <td>能源管理系統應用程式介面(EMS-API)－第556部：CIM 圖形交換格式 (CIM/G)</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">英文名稱</th>\n      <td>Energy management system application program interface (EMS-API) – Part 556: CIM based graphic exchange format (CIM/G)</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">制定重點概要</th>\n      <td>1.本標準規定 CIM 圖形交換格式(CIM/G),包括圖形文件結構和圖形元素定義。支援不同 SCADA/EMS 系統之間離線交換圖形顯示及線上遠端瀏覽圖表之機制。<br>2.主要制定內容<br>本標準與其他標準之關係、圖檔案及定義檔案之結構、圖檔案結構、基本形狀圖形元件、電力系統圖形元件及運行時間之顯示機制等。</td>\n    </tr>\n  </tbody>\n</table>",
+    "questions": [
+      "我需要找一份關於「電力自動化系統中定義Basic Application Profiles（BAP）的指導方針」，對應的CNS標準號是多少？",
+      "在CNS 61970-453中，主要規範的是哪兩種EMS系統之間的圖表交換內容？它和CIM數據模型有什麼關聯？",
+      "我想知道有載分接頭切換器狀態監視診斷功能的BAP範例是出現在哪一個CNS標準裡，並說明其適用場景？",
+      "CNS 61850-7-6和CNS 61970-556都涉及電力系統資訊交換，請問兩者在圖形顯示或操作交換上的差異在哪裡？",
+      "哪個標準規定了CIM圖形交換格式（CIM/G），並支持不同SCADA/EMS系統間的離線圖檔互通？它的核心結構包含哪些部分？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111216114642100_1/1111216114642100_1_page_0004.png",
+    "ocr_text": "<table><tr><td>標準總號</td><td>CNS 62056-5-3</td></tr><tr><td>標準名稱</td><td>電力計量資料交換－DLMS/COSEM 套組－第 5-3 部：DLMS/COSEM 應用層</td></tr><tr><td>英文名稱</td><td>Electricity metering data exchange - The DLMS/COSEM suite - Part 5-3: DLMS/COSEM application layer</td></tr><tr><td>制定重點概要</td><td>1.本標準由 DLMS/COSEM 客戶端及伺服器端之結構、服務及協定方面，規定 DLMS/COSEM 應用層，並定義用以規定 DLMS/COSEM 通訊剖繪之規則。<br>2. 主要制定內容<br>DLMS/COSEM 應用層服務規格、DLMS/COSEM 應用層協定規格、資料傳送服務之協定等。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 62351-4</td></tr><tr><td>標準名稱</td><td>電力系統管理及關聯資訊交換－資料及通訊安全－第 4 部：包括 MMS 及衍生之剖繪</td></tr><tr><td>英文名稱</td><td>Power systems management and associated information exchange - Data and communications security - Part 4: Profiles including MMS and derivatives</td></tr><tr><td>制定重點概要</td><td>1. 本標準規定電力系統管理及關聯資訊交換所涉及傳送層及應用層的安全要求，提供應用層共享密鑰管理和數據傳輸加密規定等。<br>2. 主要制定內容<br>通訊參考模型、應用剖繪及傳送剖繪之安全、特定要求事項、傳送安全、應用層安全概觀等。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 62443-2-4</td></tr><tr><td>標準名稱</td><td>工業自動化及控制系統之安全性－第 2-4 部：IACS 服務提供者之安全計畫要求事項</td></tr><tr><td>英文名稱</td><td>Security for industrial automation and control systems - Part 2-4: Security program requirements for IACS service providers</td></tr><tr><td>制定重點概要</td><td>1.本標準係規定周延的安全能力之要求事項集，俾 IACS 服務提供者可於“自動化解決方案”之整合及維護活動期間，提供此等安全能力予資產擁有者。<br>2.主要制定內容<br>用語及定義、成熟度模型、要求事項概觀、安全要求事項。</td></tr></table>",
+    "questions": [
+      "DLMS/COSEM 應用層的標準號是什麼？它主要規範哪些內容？",
+      "在電力系統資安標準中，哪一個 CNS 號碼是關於包含 MMS 的通訊安全剖繪要求？簡單說一下它的核心內容。",
+      "我需要一個工業自動化安全計畫標準，特別是針對 IACS 服務提供者的要求，請問相關的 CNS 編號和主要重點是什麼？",
+      "有沒有標準規範 DLMS/COSEM 的通訊結構和協定細節？如果有，請告訴我英文名稱和它的主要制定內容。",
+      "在電力系統的資訊交換安全標準中，哪一個 CNS 號碼會提到應用層共享密鑰管理和數據傳輸加密？它主要涵蓋哪幾個安全層面？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111216114642100_1/1111216114642100_1_page_0005.png",
+    "ocr_text": "<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td>\n     CNS 62443-3-3\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td>\n     工業通訊網路—網路及系統安全—第3-3部:系統安全要求事項及安全等級\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td>\n     Industrial communication networks – Network and system security – Part 3-3: System security requirements and security levels\n    </td>\n   </tr>\n   <tr>\n    <td>\n     制定重點概要\n    </td>\n    <td>\n     1.本標準提供與本系列標準第1-1部中所描述之7項基本要求事項(FR)相關聯的詳細技術控制系統要求事項(SR),包括定義控制系統能力安全等級(即SL-C(控制系統))之要求事項。<br/>\n     2.主要制定內容<br/>\n     共同控制系统安全限制條件、識別與鑑別控制、使用控制、系统完整性、資料機密性、受限制之資料流、對事件之及時因應、資源可用性。\n    </td>\n   </tr>\n  </table>\n\n經濟部111年12月15日經授標字第11120051230號公告國家標準制定重點\n\n<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td>\n     CNS 60335-2-25\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td>\n     家用和類似用途電器－安全性－第 2-25 部：微波爐與複合型微波爐之個別規定\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td>\n     Household and similar electrical appliances – Safety – Part 2-25: Particular requirements for microwave ovens, including combination microwave ovens\n    </td>\n   </tr>\n   <tr>\n    <td>\n     修訂重點概要\n    </td>\n    <td>\n     1.本標準規定額定電壓250V以下，家用微波爐之安全規範。<br/>\n     2.主要修訂內容<br/>\n     新增異常試驗項目要求及構造要求。\n    </td>\n   </tr>\n  </table>",
+    "questions": [
+      "CNS 62443-3-3 這個標準是針對工業通訊網路系統安全的哪些具體控制項目做規範？",
+      "家用微波爐安全標準 CNS 60335-2-25 的最新修訂重點包括哪些新增的測試項目？",
+      "我需要找一份規範微波爐安全性的國家標準，英文名稱包含「microwave ovens」的標準號碼是什麼？",
+      "CNS 62443-3-3 標準在系統安全等級（SL-C）的定義上，主要是針對哪七項基本要求（FR）提供技術控制要求？",
+      "經濟部在哪一天公告了 CNS 62443-3-3 的國家標準制定重點？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0001.png",
+    "ocr_text": "檔 號：\n保存年限：\n\n經濟部 公告\n\n發文日期：中華民國111年12月27日\n發文字號：經授標字第11120051300號\n附件：如文\n\n裝訂\n\n主 旨：公告制定CNS 16191-3「結件—表面不連續—第3部：特\n殊要求之螺栓、螺釘和螺樁」國家標準等十種、修訂\nCNS 14065「環境資訊確證與查證機構之一般原則及要求\n事項」國家標準三種。\n\n依據：國家標準制定辦法第十四條。\n\n公告事項：\n\n一、制定國家標準十種(如目錄)。\n\n二、修訂國家標準三種(如目錄)。\n\n部長 王美花",
+    "questions": [
+      "這份公文是經濟部在111年12月公告哪兩類國家標準的制定與修訂？",
+      "「CNS 16191-3 結件—表面不連續—第3部：特殊要求之螺栓、螺釘和螺樁」這個標準是新制定還是修訂的？",
+      "經濟部這次公告的新制定標準有幾種？分別是什麼內容？",
+      "公告制定或修訂國家標準的依據是什麼法規條文？",
+      "這份公文中提到的「附件：如文」代表什麼意思？需要參考其他資料嗎？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0002.png",
+    "ocr_text": "國家標準公告目錄\n\n<table><thead><tr><th colspan=\"2\">制定國家標準目錄</th><th rowspan=\"2\">標準名稱</th></tr><tr><th>總號</th><th>類號</th></tr></thead><tbody><tr><td>16191-3</td><td>B2828-3</td><td>結件-表面不連續-第3部:特殊要求之螺栓、螺釘和螺榫<br>Fasteners - Surface discontinuities - Part 3: Bolts, screws and studs for special requirements</td></tr><tr><td>16193-1</td><td>D1088-1</td><td>道路車輛-車輛對電網通訊介面-第1部:一般資訊及使用案例定義<br>Road vehicles - Vehicle to grid communication interface - Part 1: General information and use-case definition</td></tr><tr><td>21087</td><td>K1289</td><td>氣體分析-氢燃料分析法-道路車輛用質子交換膜(PEM)燃料電池<br>Gas analysis - Analytical methods for hydrogen fuel - Proton exchange membrane (PEM) fuel cell applications for road vehicles</td></tr><tr><td>61968-11</td><td>X2035-11</td><td>電力公用事業應用整合-配電管理之系統介面-第11部:配電之共同資訊模型(CIM)延伸<br>Application integration at electric utilities - System interfaces for distribution management - Part 11: Common information model (CIM) extensions for distribution</td></tr><tr><td>61970-452</td><td>X2031-452</td><td>能源管理系統應用程式介面(EMS-API)-第452部:CIM靜態輪電網模型<br>Energy management system application program interface (EMS-API) - Part 452: CIM static transmission network model profiles</td></tr><tr><td>61970-456</td><td>X2031-456</td><td>能源管理系統應用程式介面(EMS-API)-第456部:電力系統狀態解剖繪<br>Energy management system application program interface(EMS-API) - Part 456: Solved power system state profiles</td></tr><tr><td>62040-1</td><td>C6469-1</td><td>不斷電系統(UPS)-第1部:安全要求<br>Uninterruptible power systems (UPS) - Part 1: Safety requirements</td></tr><tr><td>62660-3</td><td>C4631-3</td><td>電動道路車輛推進用二次鋰離子單電池-第3部:安全要求<br>Secondary lithium-ion cells for the propulsion of electric road vehicles - Part 3: Safety requirements</td></tr><tr><td>62909-1</td><td>C4630-1</td><td>雙向併網電力轉換器-第1部:一般要求事項<br>Bi-directional grid-connected power converters - Part 1: General requirements</td></tr><tr><td>62909-2</td><td>C4630-2</td><td>雙向併網電力轉換器-第2部:GCPC與分散式能源之介面<br>Bi-directional grid-connected power converters - Part 2: Interface of GCPC and distributed energy resources</td></tr></tbody></table>\n\n<table>\n<thead>\n<tr>\n<th colspan=\"2\">修訂國家標準目錄</th>\n<th rowspan=\"2\">標準名稱</th>\n</tr>\n<tr>\n<th>總號</th>\n<th>類號</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>14065</td>\n<td>Q1006</td>\n<td>環境資訊確認與查證機構之一般原則及要求事項<br>General principles and requirements for bodies validating and verifying<br>enviromental information</td>\n</tr>\n<tr>\n<td>15122</td>\n<td>K1286</td>\n<td>氢燃料品質-產品規格<br>Hydrogen fuel quality - Product specification</td>\n</tr>\n<tr>\n<td>15176-4</td>\n<td>C4501-4</td>\n<td>風力機-第4部:風力機齒輪箱之設計及規範<br>Wind turbines - Part 4: Design requirements for wind turbine gearboxes</td>\n</tr>\n</tbody>\n</table>",
+    "questions": [
+      "有關電動車用二次鋰離子電池的安全標準號碼是多少？類號和總號都要。",
+      "想找一份關於「道路車輛與電網通訊介面」的國家標準，請問有哪些相關標準編號（總號/類號）？",
+      "風力渦輪機齒輪箱設計規範的國家標準總號和類號是什麼？這份標準是否屬於修訂版？",
+      "我需要查詢「能源管理系統應用程式介面（EMS-API）」相關標準，特別是與電力系統狀態解剖繪（state profiles）有關的部分，請問有哪些對應的總號？",
+      "有沒有國家標準規範「不斷電系統（UPS）」的安全要求？如果有，請告知標準名稱、總號和類號。"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0003.png",
+    "ocr_text": "<table><tr><td>標準總號</td><td>CNS 16191-3</td></tr><tr><td>標準名稱</td><td>結件-表面不連續-第3部:特殊要求之螺栓、螺釘和螺樁</td></tr><tr><td>英文名稱</td><td>Fasteners - Surface discontinuities - Part 3: Bolts, screws and studs for special requirements</td></tr><tr><td>制定重點概要</td><td>1.本標準規定特殊要求之螺栓、螺釘及螺樁上各種表面不連續之限制。<br/>2.主要制定內容<br/>包括表面不連續之類型、外觀、檢驗及評估程序要求等。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 16193-1</td></tr><tr><td>標準名稱</td><td>道路車輛-車輛對電網通訊介面-第1部:一般資訊及使用案例定義</td></tr><tr><td>英文名稱</td><td>Road vehicles - Vehicle to grid communication interface - Part 1: General information and use-case definition</td></tr><tr><td>制定重點概要</td><td>1. 本標準適用於由電動車輛供電設備對電動車電池充電,抑或自電動車電池傳送電能至電動車供電設備,以便對家庭、負載或電網供電。<br/>2. 主要制定內容<br/>本標準作為本系列標準其他各部之基礎,規定電動車輛通訊控制器與供電設備通訊控制器間的傳導式及無線高階通訊之用語及定義、一般要求事項及使用案例。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 21087</td></tr><tr><td>標準名稱</td><td>氣體分析-氢燃料分析法-道路車輛用質子交換膜(PEM)燃料電池</td></tr><tr><td>英文名稱</td><td>Gas analysis - Analytical methods for hydrogen fuel - Proton exchange membrane (PEM) fuel cell applications for road vehicles</td></tr><tr><td>制定重點概要</td><td>1.本標準規定道路車輛用質子交換膜(PEM)燃料電池所使用之氫,其於輸配場所及加氢站之分析法的確效計畫書,用以確保氣態氢(H₂)品質。本標準亦提供含量分率的不確定度分析表估算建議。<br/>2.主要制定內容<br/>(1)內容包括第4節「符號」、第5節「燃料的品質」、第6節「分析方法確效及適合性之要求」、第7節「分析技術」、第8節「取樣」及第9節「分析報告」。<br/>(2)表1「分析法之特性概要」說明特性包括選擇性、偵測極限及定量極限、分析範圍、真實度、精密度、量測不確定度及穩健性;表2「適用於氢中雜質量測的分析法」說明 CNS 15122 等級D之雜質及其限值、分析技術、考量項目及分析法參考資料。</td></tr></table>",
+    "questions": [
+      "我需要找到關於「螺栓、螺釘和螺樁表面缺陷」的標準編號和中文名稱，有哪個標準適用特殊要求的產品？",
+      "電動車可以「向電網回送電能」的通訊介面標準是哪個？英文名稱是什麼？",
+      "如果想了解「道路車輛用燃料電池氫氣分析方法」，該查哪個CNS標準？它會規範什麼內容？",
+      "請問有哪個標準專門規範「氫燃料中雜質的分析方法」，並包含「量測不確定度」和「選擇性」等指標？",
+      "我需要一份標準，說明「電動車與充電設備通訊協定」的基礎用語和使用案例，應該查哪一個號碼？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0004.png",
+    "ocr_text": "<table><tr><td>標準總號</td><td>CNS 61968-11</td></tr><tr><td>標準名稱</td><td>電力公用事業應用整合－配電管理之系統介面－第 11 部：配電之共同資訊模型(CIM)延伸</td></tr><tr><td>英文名稱</td><td>Application integration at electric utilities – System interfaces for distribution management – Part 11: Common information model (CIM) extensions for distribution</td></tr><tr><td>制定重點概要</td><td>1.本標準規定延伸基底通用資訊模型(CIM)，提供配電網之需要，以及電力公用事業常用之資訊系統整合。<br/>2.主要制定內容<br/>CIM 規格、CIM UML 建模、頂層套件、負載控制套件等。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 61970-452</td></tr><tr><td>標準名稱</td><td>能源管理系統應用程式介面(EMS-API)－第 452 部：CIM 靜態輸電網模型制繪</td></tr><tr><td>英文名稱</td><td>Energy management system application program interface (EMS-API) – Part 452: CIM static transmission network model profiles</td></tr><tr><td>制定重點概要</td><td>1.本標準定義控制中心及控制中心組件(例：電力系統應用程式)間執行狀態所需的 CIM。<br/>2.主要制定內容<br/>應用制繪規格、變壓器建模、排程之定義、詳細制繪規格、擴增及規約等。</td></tr></table>\n\n<table><tr><td>標準總號</td><td>CNS 61970-456</td></tr><tr><td>標準名稱</td><td>能源管理系統應用程式介面(EMS-API)－第 456 部：電力系統狀態解剖繪</td></tr><tr><td>英文名稱</td><td>Energy management system application program interface (EMS-API) – Part 456: Solved power system state profiles</td></tr><tr><td>制定重點概要</td><td>1.本標準定義電力系統分析應用程序、CIM 之類別子集、類別屬性及角色，提供穩定電網之方案。<br/>2.主要制定內容<br/>剖繪規格、連接性模型、EMS 電網分析整合、依電力潮流之電網分析、模型割分及邊界建模、詳細制繪規格等。</td></tr></table>",
+    "questions": [
+      "我需要查詢關於「配電管理系統與 CIM 模型整合」的台灣國家標準編號是什麼？",
+      "請問哪個標準規範了「電力系統應用程式與 CIM 靜態輸電網模型」的介面規格？",
+      "在電力系統穩定分析中，哪個 CNS 標準定義了「解剖繪（solved profiles）」的 CIM 類別子集？",
+      "有沒有標準專門處理「配電網共同資訊模型（CIM）的延伸」？如果有，請提供相關標準編號和主要內容。",
+      "我需要了解「能源管理系統應用程式介面（EMS-API）」中與 CIM 變壓器建模相關的標準，請問對應的 CNS 總號是多少？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0005.png",
+    "ocr_text": "<table>\n  <tbody>\n    <tr>\n      <td>標準總號</td>\n      <td>CNS 62040-1</td>\n    </tr>\n    <tr>\n      <td>標準名稱</td>\n      <td>不斷電系統(UPS)－第1部：安全要求</td>\n    </tr>\n    <tr>\n      <td>英文名稱</td>\n      <td>Uninterruptible power systems (UPS) - Part 1: Safety requirements</td>\n    </tr>\n    <tr>\n      <td>制定重點概要</td>\n      <td>\n        1.本標準適用於移動式、落地式、固定式或內建式且包含儲能裝置之 UPS,其用於低電壓配電系統中並安裝在一般人員可觸及區域或限制區域,傳輸埠輸出電壓不超過1000 VAC或1500 VDC之電壓。亦適用插接式或永久連接式UPS,無論是否由互連單元或獨立單元組成之系統。<br/>\n        2.主要制定內容<br/>\n        規定不斷電系統之危害防護、安全試驗規定、資訊及標示規定、電擊保護之額外規定、運送中電池斷連準則、機架安裝式設備之安裝規定。\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td>\n     CNS 62660-3\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td>\n     電動道路車輛推進用二次鋰離子單電池—第3部：安全要求\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td>\n     Secondary lithium-ion cells for the propulsion of electric road vehicles – Part 3: Safety requirements\n    </td>\n   </tr>\n   <tr>\n    <td rowspan=\"2\">\n     制定重點概要\n    </td>\n    <td>\n     1.本標準適用於在電動車正常運行期間,用於電池組及系統之單電池,測定單電池在預期使用及可預期合理誤用或事故下之基本安全性。\n    </td>\n   </tr>\n   <tr>\n    <td>\n     2.主要制定內容<br/>\n     包括試驗條件、電性量測、安全性試驗、替代性內部短路試驗等。\n    </td>\n   </tr>\n  </table>\n\n<table>\n  <tbody>\n    <tr>\n      <td>標準總號</td>\n      <td>CNS 62909-1</td>\n    </tr>\n    <tr>\n      <td>標準名稱</td>\n      <td>雙向併綱電力轉換器－第1部：一般要求事項</td>\n    </tr>\n    <tr>\n      <td>英文名稱</td>\n      <td>Bi-directional grid-connected power converters - Part 1: General requirements</td>\n    </tr>\n    <tr>\n      <td rowspan=\"2\">制定重點概要</td>\n      <td>1.本標準適用於雙向併綱電力轉換器,系統電壓不超過1,000 V交流或1,500 V直流,可用於雙向儲能裝置,不適用於不斷電系統。</td>\n    </tr>\n    <tr>\n      <td>2.主要制定內容<br/>包括用語、規格、性能、安全、系統架構及試驗案例定義。</td>\n    </tr>\n  </tbody>\n</table>\n\n<table><tbody><tr><td>標準總號</td><td>CNS 62909-2</td></tr><tr><td>標準名稱</td><td>雙向併綱電力轉換器－第2部：GCPC 與分散式能源之介面</td></tr><tr><td>英文名稱</td><td>Bi-directional grid-connected power converters - Part 2: Interface of GCPC and distributed energy resources</td></tr><tr><td rowspan=\"2\">制定重點概要</td><td>1.適用於雙向併綱電力轉換器與特定分散式能源,即電動車輛、儲能電池、太陽光電系統之介面要求。</td></tr><tr><td>2.主要制定內容<br/>包括操作模式、分散式能源之介面、性能要求、危險防護要求、試驗規定、資訊及標示要求、電動車之介面要求等。</td></tr></tbody></table>",
+    "questions": [
+      "我需要查一下哪個標準規範了不斷電系統（UPS）的安全試驗規定，以及電擊保護的額外要求？",
+      "想請問電動車輛用二次鋰離子單電池的安全性能標準（CNS編號）是什麼？主要是針對電動車正常運行期間的安全性測試。",
+      "雙向併綱電力轉換器（系統電壓不超過1000V AC或1500V DC）的標準總號是什麼？這個標準有規定哪些主要內容？",
+      "請告訴我哪個標準適用於UPS在一般人員可觸及區域使用，並且包含儲能裝置的安全要求？",
+      "我需要找一個關於「雙向併綱電力轉換器與分散式能源介面」的標準，特別是涉及電動車輛、儲能電池或太陽光電系統接口要求的部分。"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0006.png",
+    "ocr_text": "<table>\n  <tr>\n    <td>標準總號</td>\n    <td>CNS 14065</td>\n  </tr>\n  <tr>\n    <td>標準名稱</td>\n    <td>環境資訊確認與查證機構之一般原則及要求事項</td>\n  </tr>\n  <tr>\n    <td>英文名稱</td>\n    <td>General principles and requirements for bodies validating and verifying environmental information</td>\n  </tr>\n  <tr>\n    <td>修訂重點概要</td>\n    <td>\n      1.本標準具體規定執行環境資訊聲明確認與查證機構之原則與要求。<br/>\n      2.主要修訂內容<br/>\n      (1)標題:「溫室氣體-使用於溫室氣體確認與查證機構之認證或其他認可形式之要求事項」,修正為「環境資訊確認與查證機構之一般原則及要求事項。<br/>\n      (2)增列附錄 A(參考)意見類型、附錄B(參考)引用確證/查證聲明與標誌使用、附錄C(參考)事實報告發現之範例、附錄D(規定)適用於綠色債券確認、查證及協議程序(AUP)之附加要求事項、附錄E(規定)適用於溫室氣體確認、查證及協議程序(AUP)之附加要求事項、附錄F(規定)適用於氣候變遷相關投資與融資活動報告有關的確認、查證及協議程序(AUP)之附加要求等內容。\n    </td>\n  </tr>\n</table>\n\n<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td colspan=\"2\">\n     CNS 15122\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td colspan=\"2\">\n     氫燃料品質-產品規格\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td colspan=\"2\">\n     Hydrogen fuel quality - Product specification\n    </td>\n   </tr>\n   <tr>\n    <td rowspan=\"3\">\n     修訂重點概要\n    </td>\n    <td colspan=\"2\">\n     1.本標準適用於配送供車輛用及定置型應用之氫燃料，並規定其基本品質特性。本標準規定之氫燃料適用於表1所列之加氢用途。\n     </td>\n    </tr>\n    <tr>\n     <td colspan=\"2\">\n      2.主要修訂內容\n     </td>\n    </tr>\n    <tr>\n     <td colspan=\"2\">\n      (1)表1「依用途之氫燃料及氨基燃料分類」增列型式I等級D及E、型式II分為等級C及等級D。\n     </td>\n    </tr>\n    <tr>\n     <td rowspan=\"2\">\n     </td>\n     <td colspan=\"2\">\n      (2)增列表2「道路車輛用PEM燃料電池之燃料品質」、表3「定置型應用之PEM燃料電池的燃料品質」。\n     </td>\n    </tr>\n    <tr>\n     <td colspan=\"2\">\n      (3)增列附錄A(參考)「定置型應用之PEM燃料電池的邊界點選擇指引」、附錄B(參考)「定置型應用之PEM燃料電池測定氮雜質的合理性說明」及附錄C(參考)「定置型應用之PEM燃料電池的變壓吸附及一氧化碳(CO)的指標適用性」。\n     </td>\n    </tr>\n   </table>",
+    "questions": [
+      "CNS 14065 這個標準的英文名稱是什麼？它規範的是什麼機構的認證原則？",
+      "氫燃料品質標準 CNS 15122 新增了哪些型式與等級的分類，特別是針對車輛用與定置型應用？",
+      "環境資訊確認與查證機構標準（CNS 14065）在修訂版本中新增了哪些附錄，特別是哪些是規定性（強制）而非參考性的？",
+      "CNS 15122 標準中的「定置型應用之PEM燃料電池」有哪些新增的技術指引或測試說明，特別是關於氮雜質的部分？",
+      "想知道 CNS 14065 的修訂重點在哪裡？例如，原先規範的溫室氣體相關內容如何轉化為更廣泛的環境資訊領域？"
+    ]
+  },
+  {
+    "source_path": "tests/testcases/input_dir/pdf_images/1111228112136490_1/1111228112136490_1_page_0007.png",
+    "ocr_text": "<table>\n   <tr>\n    <td>\n     標準總號\n    </td>\n    <td>\n     CNS 15176-4\n    </td>\n   </tr>\n   <tr>\n    <td>\n     標準名稱\n    </td>\n    <td>\n     風力機－第 4 部：風力機齒輪箱之設計及規範\n    </td>\n   </tr>\n   <tr>\n    <td>\n     英文名稱\n    </td>\n    <td>\n     Wind turbines - Part 4: Design requirements for wind turbine gearboxes\n    </td>\n   </tr>\n   <tr>\n    <td>\n     修訂重點概要\n    </td>\n    <td>\n     1.本標準適用風力機齒輪箱之規格、設計和驗證的最低要求，提供齒輪和齒輪箱元件設計時風力機負載分析方面的指南，以確保風力機之工程完整性，其目的係在計畫之壽命期間內提供適當之保護水準。\n     <br/>\n     2.主要修訂內容\n     <br/>\n     包括提供齒輪箱設計、傳動鏈運轉條件、品質計畫、保養及維護要求等。\n    </td>\n   </tr>\n  </table>",
+    "questions": [
+      "風力機齒輪箱的標準編號是什麼？這份標準的英文名稱和中文名稱有什麼不同？",
+      "這份標準（CNS 15176-4）主要規範的是風力機齒輪箱的哪些設計要求，能簡單說明一下嗎？",
+      "修訂版的風力機齒輪箱標準新增了哪些關鍵重點，例如齒輪箱設計或維護保養方面？",
+      "如果想了解風力機齒輪箱的設計驗證流程，這份標準能提供什麼指導原則？",
+      "這份標準的主要目的是什麼？它在風力機齒輪箱的工程完整性保護上有什麼具體作用？"
+    ]
+  }
+]

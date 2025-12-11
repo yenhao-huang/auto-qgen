@@ -1,0 +1,46 @@
+# 測試配置 - Excel Pipeline
+# 處理單個或批次 Excel 檔案
+
+# Pipeline 類型：auto（自動檢測）、excel、image、pdf
+pipeline_type: excel
+
+# 輸入文件路徑（可以是單檔或目錄）
+input: tests/testcases/input_dir/excel
+
+# Metadata（選用）
+metadata:
+  test_name: "test_excel"
+  description: "測試 Excel 檔案處理"
+
+# Excel Pipeline 設定
+excel:
+  # 是否跳過 Parser 步驟
+  skip_parser: false
+
+  # 輸出目錄
+  output_dir: "tests/results/test_input_dir/test_excel"
+
+  # Parser LLM 設定
+  parser:
+    llm:
+      url: "http://192.168.1.78:3132/v1/chat/completions"
+      model: mistralai3
+      api_key: null
+      use_openrouter: false
+      max_retries: 3
+
+  # Augmenter LLM 設定
+  augmenter:
+    prompt_name: "default"
+    mode: vllm
+
+    vllm:
+      url: http://192.168.1.78:3132/v1/chat/completions
+      model_name: mistralai3
+      max_tokens: 4096
+      temperature: 0.7
+      top_p: 0.9
+      frequency_penalty: 0.1
+      presence_penalty: 0.1
+      is_thinking_mode: true
+      limit_llmoutput_scheme: false
